@@ -3,11 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&family=Poppins:wght@800&display=swap" rel="stylesheet">
+    <title>Mintra App</title>
   </head>
-  <body>
-    <div id="app">
-    </div>
+  <body class="bg-[#FBFAFA]">
+    <header>
+      <nav id="headerNav" class="w-screen h-20 bg-blue-200">
+        <div class="max-w-7xl w-full h-full px-6 my-0 mx-auto flex items-center justify-between">
+          <a href="#" class="font-poppins text-[20px] sm:text-[32px] font-extrabold">MINTRA</a>
+          <div id="hamburger" class="w-fit h-8 sm:hidden relative flex flex-col justify-center items-end gap-1 transition-all duration-200">
+            <div id="hamburgerLine" class="hamburger-line"></div>
+          </div>
+        </div>
+       
+      </nav>
+    </header>
     <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/landing-page.js"></script>
   </body>
 </html>

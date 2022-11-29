@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hamburger-line{
+@apply transition w-7 h-1 relative bg-black after:w-8 after:h-1 after:bg-black after:absolute after:transition after:top-2 after:right-0 before:w-6 before:h-1 before:bg-black before:absolute before:-top-2 before:right-0;
+}
+
+.hamburger-line-active{
+ @apply transition duration-200 rotate-45 w-8 h-1 relative bg-black after:w-8 after:h-1 after:bg-black after:transition after:absolute after:top-0 after:-rotate-90 after:right-auto before:w-8 before:transition before:h-1 before:bg-black before:absolute before:rotate-90 before:top-0 before:right-auto;
+}
