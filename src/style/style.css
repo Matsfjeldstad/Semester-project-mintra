@@ -9,3 +9,37 @@
 .hamburger-line-active{
  @apply transition duration-200 rotate-45 w-8 h-1 relative bg-black after:w-8 after:h-1 after:bg-black after:transition after:absolute after:top-0 after:-rotate-90 after:right-auto before:w-8 before:transition before:h-1 before:bg-black before:absolute before:rotate-90 before:top-0 before:right-auto;
 }
+
+.mobile-nav-active{
+  height: calc(100vh - 80px);
+}
+
+.animate-in{
+  animation: animate-in 400ms ease-in;
+  animation-delay: attr(data-delay s);
+}
+
+nav a:nth-child(2){
+  animation-delay: 0ms;
+}
+nav a:nth-child(3){
+  animation-delay: 20ms;
+}
+nav a:nth-child(4){
+  animation-delay: 40ms;
+}
+nav a:nth-child(5){
+  animation-delay: 80ms;
+}
+
+#userButton {
+  animation-delay: 60ms;
+}
+@keyframes animate-in {
+  0%{
+    transform: translateX(-120px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
