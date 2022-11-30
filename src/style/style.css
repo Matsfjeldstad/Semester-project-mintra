@@ -15,6 +15,10 @@
     @apply duration-100 py-4 px-6 bg-[#141414] text-white rounded-md hover:bg-[#4B4B4B]
   }
 
+  .card{
+    @apply duration-100 bg-white h-[350px] rounded-xl overflow-hidden border border-[#D1D1D1] hover:scale-[1.03]
+  }
+
 }
 
 .hamburger-line-active{
