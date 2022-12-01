@@ -23,6 +23,10 @@
     @apply border border-gray-300 p-4 rounded-lg 
   }
 
+  .inputError{
+    @apply border-2 outline-red-500 border-red-500 bg-red-200 placeholder:text-red-900
+  }
+
 }
 
 .hamburger-line-active{
