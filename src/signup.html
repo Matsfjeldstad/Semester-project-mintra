@@ -20,16 +20,14 @@
                             <path d="M0.292893 7.29289C-0.0976314 7.68342 -0.0976315 8.31658 0.292892 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928931C7.68054 0.538407 7.04738 0.538407 6.65686 0.928931L0.292893 7.29289ZM17 7L1 7L1 9L17 9L17 7Z" fill="black"/>
                         </svg>
                         </button>
-                    <span class="font-poppins text-[96px] font-extrabold text-[#E1CC0B]">
-                      <a href="index.html" class="font-poppins text-[96px] font-extrabold text-[#E1CC0B] flex">
-                        <div class=" duration-200 hover:-translate-y-3 hover:-rotate-6">M</div>
-                        <div class=" duration-200 hover:-translate-y-3 hover:rotate-3" >I</div>
-                        <div class=" duration-200 hover:-translate-y-3 hover:-rotate-3">N</div>
-                        <div class=" duration-200 hover:-translate-y-3 hover:rotate-3">T</div>
-                        <div class=" duration-200 hover:-translate-y-3 hover:-rotate-3">R</div>
-                        <div class=" duration-200 hover:-translate-y-3 hover:rotate-3">A</div>
-                       </a>
-                  </span>
+                    <a href="index.html" class="font-poppins text-[96px] font-extrabold text-[#E1CC0B] flex">
+                        <div class=" duration-200 hover:-translate-y-3">M</div>
+                        <div class=" duration-200 hover:-translate-y-3" >I</div>
+                        <div class=" duration-200 hover:-translate-y-3">N</div>
+                        <div class=" duration-200 hover:-translate-y-3">T</div>
+                        <div class=" duration-200 hover:-translate-y-3">R</div>
+                        <div class=" duration-200 hover:-translate-y-3">A</div>
+                    </a>
                 </div>
                 <img src="./img/21b07c4c56e9f0e2a8c43b792caf7ea1.gif" alt="" class="bg-red-600 h-full w-full object-cover grayscale z-0">
             </div>
@@ -38,21 +36,29 @@
                 <h1 class="flex flex-col items-center text-3xl">Welcome to <span class="font-poppins text-18 font-extrabold text-[#E1CC0B] text-6xl">MINTRA</span></h1>
                 <form action="" class="flex flex-col gap-4 w-full max-w-md">
                   <div class="flex flex-col">
-                    <label for="loginEmail" class="font-bold">Your Email</label>
-                    <input id="loginEmail" type="text" class="form-input" placeholder="Your Email">
+                    <label for="signupName" class="font-bold">Your Name</label>
+                    <input id="signupName" type="text" class="form-input" placeholder="Your Name">
                   </div>
                   <div class="flex flex-col">
-                    <label for="loginPassword" class="font-bold">Your Password</label>
-                    <input id="loginPassword" type="password" class="form-input" placeholder="Your password">
+                    <label for="signupEmail" class="font-bold">Your Email</label>
+                    <input id="signupEmail" type="text" class="form-input" placeholder="Your Email">
                   </div>
-                  <button class="btn"> Login</button>
+                  <div class="flex flex-col">
+                    <label for="signupPassword" class="font-bold">Your Password</label>
+                    <input id="signupPassword" type="password" class="form-input" placeholder="Your Password">
+                  </div>
+                  <div class="flex flex-col">
+                    <label for="repeatPassword" class="font-bold">Repeat Password</label>
+                    <input id="repeatPassword" type="password" class="form-input" placeholder="Repeat Password">
+                  </div>
+                  <button class="btn"> Sign Up</button>
                 </form>
-                <div>Don’t have an accout?<a href="./signup.html" class="font-bold underline">Sign Up!</a></div>
+                <div>Already have an accout?<a href="./login.html" class="font-bold underline">Login!</a></div>
               </div>
             </div>
         </section>
     </main>
     <script type="module" src="./js/main.js"></script>
-    <script type="module" src="./js/login-page.js"></script>
+    <script type="module" src="./js/signup-page.js"></script>
   </body>
 </html>
