@@ -19,6 +19,10 @@
     @apply duration-100 bg-white h-[350px] rounded-xl overflow-hidden border border-[#D1D1D1] hover:scale-[1.03]
   }
 
+  .form-input{
+    @apply border border-gray-300 p-4 rounded-lg 
+  }
+
 }
 
 .hamburger-line-active{

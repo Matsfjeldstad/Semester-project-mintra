@@ -9,7 +9,7 @@ export default {
     alias: {},
   },
   server: {
-    port: 8080,
+    port: '0666',
     hot: true,
   },
 };
