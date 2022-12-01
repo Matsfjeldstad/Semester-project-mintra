@@ -12,12 +12,12 @@
     <header>
       <div id="headerNav" class=" h-20 bg-[#FBFAFA] relative z-10">
         <div class="inner h-full px-6 flex items-center justify-between">
-          <a href="#" class="font-poppins text-[20px] sm:text-[32px] font-extrabold">MINTRA</a>
+          <a href="#" id="header-logo" class="font-poppins text-[20px] sm:text-[32px] font-extrabold">MINTRA</a>
           <div id="hamburger" class="w-fit h-8 sm:hidden relative flex flex-col justify-center items-end gap-1 transition-all duration-200">
             <div id="hamburgerLine" class="hamburger-line"></div>
           </div>
-          <nav class="w-fit h-full flex-row gap-10 hidden items-center sm:flex">
-            <a href="#" class="test font-bold">Explore</a>
+          <nav id="desktopNav" class="w-fit h-full flex-row gap-10 hidden items-center sm:flex">
+            <a href="#" class="test relative font-bold after:h-0.5 after:w-0 after:absolute after:bg-black after:left-0 after:bottom-0">Explore</a>
             <!-- <a href="#" class="test font-bold">Log in</a> -->
             <a href="#" id="logedin" class="test font-bold">Dashboard</a>
             <!-- <a href="#" class="test font-bold">Sign up</a> -->
@@ -61,7 +61,7 @@
         </div>
       </div>
     </header>
-    <main class="flex flex-col gap-24 font-inter">
+    <main class="flex flex-col gap-24 font-inter mb-24">
       <section id="heroBanner" class=" hero py-6 flex items-center"> 
         <div class="inner px-6 flex flex-col gap-4 justify-center items-center">
           <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl text-center uppercase text-[#444444]">Sign up to Mintra today.</h1>
@@ -73,204 +73,30 @@
       <section>
         <div class="inner flex flex-col items-center h-fit p-4 gap-6">
           <h3 class="font-bold">Newest Listings</h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full gap-4">
-            <a href="#" class="card">
-              <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="h-[70%] w-full object-cover">
-              <div class="p-4 flex flex-col ">
-                <h4 class=" font-bebas-neue text-3xl">a stone</h4>
-                <div class="flex gap-4 text-sm">
-                  <div>
-                    <div class="text-[#898888]">Highest Bid</div>
-                    <div class="font-bold text-[#242424]">200c</div>
-                  </div>
-                  <div>
-                    <div class="text-[#898888]">Time left</div>
-                    <div class="font-bold">1h 13m 14s</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="card">
-              <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="h-[70%] w-full object-cover">
-              <div class="p-4 flex flex-col ">
-                <h4 class=" font-bebas-neue text-3xl">a stone</h4>
-                <div class="flex gap-4 text-sm">
-                  <div>
-                    <div class="text-[#898888]">Highest Bid</div>
-                    <div class="font-bold text-[#242424]">200c</div>
-                  </div>
-                  <div>
-                    <div class="text-[#898888]">Time left</div>
-                    <div class="font-bold">1h 13m 14s</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="card">
-              <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="h-[70%] w-full object-cover">
-              <div class="p-4 flex flex-col ">
-                <h4 class=" font-bebas-neue text-3xl">a stone</h4>
-                <div class="flex gap-4 text-sm">
-                  <div>
-                    <div class="text-[#898888]">Highest Bid</div>
-                    <div class="font-bold text-[#242424]">200c</div>
-                  </div>
-                  <div>
-                    <div class="text-[#898888]">Time left</div>
-                    <div class="font-bold">1h 13m 14s</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="card">
-              <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="h-[70%] w-full object-cover">
-              <div class="p-4 flex flex-col ">
-                <h4 class=" font-bebas-neue text-3xl">a stone</h4>
-                <div class="flex gap-4 text-sm">
-                  <div>
-                    <div class="text-[#898888]">Highest Bid</div>
-                    <div class="font-bold text-[#242424]">200c</div>
-                  </div>
-                  <div>
-                    <div class="text-[#898888]">Time left</div>
-                    <div class="font-bold">1h 13m 14s</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="card">
-              <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="h-[70%] w-full object-cover">
-              <div class="p-4 flex flex-col ">
-                <h4 class=" font-bebas-neue text-3xl">a stone</h4>
-                <div class="flex gap-4 text-sm">
-                  <div>
-                    <div class="text-[#898888]">Highest Bid</div>
-                    <div class="font-bold text-[#242424]">200c</div>
-                  </div>
-                  <div>
-                    <div class="text-[#898888]">Time left</div>
-                    <div class="font-bold">1h 13m 14s</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="card">
-              <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="h-[70%] w-full object-cover">
-              <div class="p-4 flex flex-col ">
-                <h4 class=" font-bebas-neue text-3xl">a stone</h4>
-                <div class="flex gap-4 text-sm">
-                  <div>
-                    <div class="text-[#898888]">Highest Bid</div>
-                    <div class="font-bold text-[#242424]">200c</div>
-                  </div>
-                  <div>
-                    <div class="text-[#898888]">Time left</div>
-                    <div class="font-bold">1h 13m 14s</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="card">
-              <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="h-[70%] w-full object-cover">
-              <div class="p-4 flex flex-col ">
-                <h4 class=" font-bebas-neue text-3xl">a stone</h4>
-                <div class="flex gap-4 text-sm">
-                  <div>
-                    <div class="text-[#898888]">Highest Bid</div>
-                    <div class="font-bold text-[#242424]">200c</div>
-                  </div>
-                  <div>
-                    <div class="text-[#898888]">Time left</div>
-                    <div class="font-bold">1h 13m 14s</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="card">
-              <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="h-[70%] w-full object-cover">
-              <div class="p-4 flex flex-col ">
-                <h4 class=" font-bebas-neue text-3xl">a stone</h4>
-                <div class="flex gap-4 text-sm">
-                  <div>
-                    <div class="text-[#898888]">Highest Bid</div>
-                    <div class="font-bold text-[#242424]">200c</div>
-                  </div>
-                  <div>
-                    <div class="text-[#898888]">Time left</div>
-                    <div class="font-bold">1h 13m 14s</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="card">
-              <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="h-[70%] w-full object-cover">
-              <div class="p-4 flex flex-col ">
-                <h4 class=" font-bebas-neue text-3xl">a stone</h4>
-                <div class="flex gap-4 text-sm">
-                  <div>
-                    <div class="text-[#898888]">Highest Bid</div>
-                    <div class="font-bold text-[#242424]">200c</div>
-                  </div>
-                  <div>
-                    <div class="text-[#898888]">Time left</div>
-                    <div class="font-bold">1h 13m 14s</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="card">
-              <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="h-[70%] w-full object-cover">
-              <div class="p-4 flex flex-col ">
-                <h4 class=" font-bebas-neue text-3xl">a stone</h4>
-                <div class="flex gap-4 text-sm">
-                  <div>
-                    <div class="text-[#898888]">Highest Bid</div>
-                    <div class="font-bold text-[#242424]">200c</div>
-                  </div>
-                  <div>
-                    <div class="text-[#898888]">Time left</div>
-                    <div class="font-bold">1h 13m 14s</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="card">
-              <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="h-[70%] w-full object-cover">
-              <div class="p-4 flex flex-col ">
-                <h4 class=" font-bebas-neue text-3xl">a stone</h4>
-                <div class="flex gap-4 text-sm">
-                  <div>
-                    <div class="text-[#898888]">Highest Bid</div>
-                    <div class="font-bold text-[#242424]">200c</div>
-                  </div>
-                  <div>
-                    <div class="text-[#898888]">Time left</div>
-                    <div class="font-bold">1h 13m 14s</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="card">
-              <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="h-[70%] w-full object-cover">
-              <div class="p-4 flex flex-col ">
-                <h4 class=" font-bebas-neue text-3xl">a stone</h4>
-                <div class="flex gap-4 text-sm">
-                  <div>
-                    <div class="text-[#898888]">Highest Bid</div>
-                    <div class="font-bold text-[#242424]">200c</div>
-                  </div>
-                  <div>
-                    <div class="text-[#898888]">Time left</div>
-                    <div class="font-bold">1h 13m 14s</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          
+          <div id="listingGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full gap-4">  
           </div>
         </div>
       </section>
+      <section id="bottomCTA">
+        <div class="inner flex justify-center items-center flex-col gap-6">
+          <div class="relative w-fit">
+            <h2 class="text-5xl font-bold uppercase text-center  text-[#444444]">What are you <br> waiting for?</h2>
+            <div class="absolute left-8 -bottom-[71px]">
+              <svg width="47" height="58" viewBox="0 0 47 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M46.5607 47.0607C47.1464 46.4749 47.1464 45.5251 46.5607 44.9393L37.0147 35.3934C36.4289 34.8076 35.4792 34.8076 34.8934 35.3934C34.3076 35.9792 34.3076 36.9289 34.8934 37.5147L43.3787 46L34.8934 54.4853C34.3076 55.0711 34.3076 56.0208 34.8934 56.6066C35.4792 57.1924 36.4289 57.1924 37.0147 56.6066L46.5607 47.0607ZM3 1C1.53235 0.690162 1.53215 0.691129 1.53191 0.692266C1.53178 0.692874 1.5315 0.694186 1.53125 0.695403C1.53074 0.697837 1.53009 0.700958 1.5293 0.70476C1.52774 0.712364 1.52562 0.722691 1.52299 0.735699C1.51774 0.761715 1.51044 0.798458 1.50137 0.845583C1.48323 0.939828 1.458 1.07564 1.42786 1.25025C1.3676 1.59942 1.28765 2.10415 1.2056 2.74231C1.04161 4.01787 0.868614 5.83091 0.828381 8.00348C0.748119 12.3377 1.19498 18.1617 3.34169 24.0164C5.49551 29.8905 9.3638 35.7983 16.0983 40.2224C22.8229 44.6401 32.2857 47.5 45.5 47.5V44.5C32.7143 44.5 23.8646 41.7349 17.7455 37.7151C11.6362 33.7017 8.12949 28.3595 6.15831 22.9836C4.18002 17.5883 3.75188 12.1623 3.82787 8.05902C3.86576 6.01284 4.02871 4.31025 4.18111 3.12488C4.25727 2.53257 4.33065 2.0705 4.38415 1.76049C4.4109 1.60551 4.43266 1.48864 4.4473 1.4126C4.45462 1.37458 4.46015 1.34678 4.46363 1.32953C4.46537 1.32091 4.4666 1.31493 4.46728 1.31163C4.46762 1.30999 4.46783 1.30901 4.46789 1.30871C4.46792 1.30856 4.46786 1.30884 4.46788 1.30876C4.46778 1.30921 4.46765 1.30984 3 1Z" fill="#E1CC0B"/>
+              </svg>            
+            </div>
+          </div>
+          <a href="#"><button class="btn">Sign up now</button></a>
+        </div>
+      </section>
     </main>
+    <footer class="px-6 py-6 border-t border-gray-200 font-inter">
+      <div class="inner flex justify-between items-center">
+        <a href="#" id="header-logo" class="font-poppins text-[20px] sm:text-[24px] font-extrabold">MINTRA</a>
+        <p class="text-gray-500">Designed and developed by <a href="https://matsfjeldstad.no/" class="underline">Mats Fjeldstad</a></p>
+      </div>
+    </footer>
     <script type="module" src="./js/main.js"></script>
     <script type="module" src="./js/landing-page.js"></script>
   </body>

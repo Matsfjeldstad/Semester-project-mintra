@@ -1,3 +1,5 @@
+import newCard from './components/productCard';
+
 const hamburgerMenu = document.querySelector('#hamburger');
 
 hamburgerMenu.onclick = function menuOpen() {
@@ -13,3 +15,10 @@ hamburgerMenu.onclick = function menuOpen() {
   });
   console.log(navTest);
 };
+
+const card = newCard('https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg', 'a new rock', 20, '1h 13m 14s');
+const listingGrid = document.querySelector('#listingGrid');
+
+for (let i = 0; i < 24; i += 1) {
+  listingGrid.innerHTML += card.outerHTML;
+}
