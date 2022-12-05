@@ -16,9 +16,11 @@ hamburgerMenu.onclick = function menuOpen() {
   console.log(navTest);
 };
 
-const card = newCard('https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg', 'a new rock', 20, '1h 13m 14s');
+// const card = newCard('https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg', 'a new rock', 20, '1h 13m 14s', 'abcdefg');
 const listingGrid = document.querySelector('#listingGrid');
+const links = ['./img/no-internet.jpg', 'https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg', 'https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg'];
 
 for (let i = 0; i < 24; i += 1) {
-  listingGrid.innerHTML += card.outerHTML;
+  listingGrid.innerHTML += newCard(links, 'a new rock', 20, '1h 13m 14s', `abcdefg${i}`).outerHTML;
+  console.log(links.length);
 }
