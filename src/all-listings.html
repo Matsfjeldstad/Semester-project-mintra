@@ -9,10 +9,9 @@
     <title>Mintra App</title>
   </head>
   <body class="bg-[#FBFAFA] font-inter">
-    <header>
-      <div id="headerNav" class=" h-20 bg-[#FBFAFA] relative z-10">
+      <header id="headerNav" class="h-20 bg-[#FBFAFA] sticky top-0 z-50">
         <div class="inner h-full px-6 flex items-center justify-between">
-          <a href="#" id="header-logo" class="font-poppins text-[20px] sm:text-[32px] font-extrabold">MINTRA</a>
+          <a href="/" id="header-logo" class="font-poppins text-[20px] sm:text-[32px] font-extrabold">MINTRA</a>
           <div id="hamburger" class="w-fit h-8 sm:hidden relative flex flex-col justify-center items-end gap-1 transition-all duration-200">
             <div id="hamburgerLine" class="hamburger-line"></div>
           </div>
@@ -32,7 +31,7 @@
                 </svg>                  
             </div>
           </nav>
-          <div id="mobileNav" class="duration-300 absolute  h-0 bg-[#FBFAFA] left-0 top-20 overflow-hidden sm:hidden">
+          <div id="mobileNav" class="duration-300 absolute w-full h-0 bg-[#FBFAFA] left-0 top-20 overflow-hidden sm:hidden">
             <nav class="w-full h-full p-6 flex flex-col gap-10">
               <div class="w-full relative">
                 <label id="searchIcon" for="searchInput" class="absolute left-2 top-3">
@@ -59,36 +58,43 @@
             </nav>
           </div>
         </div>
-      </div>
-    </header>
-    <main class="flex flex-col gap-24 font-inter mb-24">
-      <section id="heroBanner" class=" hero py-6 flex items-center"> 
-        <div class="inner px-6 flex flex-col gap-4 justify-center items-center">
-          <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl text-center uppercase text-[#444444]">Sign up to Mintra today.</h1>
-          <h2 class="font-bold text-3xl sm:text-4xl md:text-5xl text-center uppercase text-[#656565] flex flex-wrap justify-center gap-2"><span class="flex gap-2">get <span class="text-[#E1CC0B] w-fit relative">1000c <img class="w-full absolute left-0" src="./img/icons/underline.svg"/></span></span>to shop for.</h2>
-          <p class="text-center text-[#7E7E7E]">Lorem ipsum dolor sit amet consectetur. Ut sagittis diam libero odio lacus est ac.</p>
-          <a href="./signup.html" class="w-fit"><button class="btn">Sign up now</button></a>
-        </div>
-      </section>
-      <section>
-        <div class="inner flex flex-col items-center h-fit p-4 gap-6">
-          <h3 class="font-bold">Newest Listings</h3>
-          <div id="listingGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full gap-4">  
-          </div>
-        </div>
-      </section>
-      <section id="bottomCTA">
-        <div class="inner flex justify-center items-center flex-col gap-6">
-          <div class="relative w-fit">
-            <h2 class="text-5xl font-bold uppercase text-center  text-[#444444]">What are you <br> waiting for?</h2>
-            <div class="absolute left-8 -bottom-[71px]">
-              <svg width="47" height="58" viewBox="0 0 47 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M46.5607 47.0607C47.1464 46.4749 47.1464 45.5251 46.5607 44.9393L37.0147 35.3934C36.4289 34.8076 35.4792 34.8076 34.8934 35.3934C34.3076 35.9792 34.3076 36.9289 34.8934 37.5147L43.3787 46L34.8934 54.4853C34.3076 55.0711 34.3076 56.0208 34.8934 56.6066C35.4792 57.1924 36.4289 57.1924 37.0147 56.6066L46.5607 47.0607ZM3 1C1.53235 0.690162 1.53215 0.691129 1.53191 0.692266C1.53178 0.692874 1.5315 0.694186 1.53125 0.695403C1.53074 0.697837 1.53009 0.700958 1.5293 0.70476C1.52774 0.712364 1.52562 0.722691 1.52299 0.735699C1.51774 0.761715 1.51044 0.798458 1.50137 0.845583C1.48323 0.939828 1.458 1.07564 1.42786 1.25025C1.3676 1.59942 1.28765 2.10415 1.2056 2.74231C1.04161 4.01787 0.868614 5.83091 0.828381 8.00348C0.748119 12.3377 1.19498 18.1617 3.34169 24.0164C5.49551 29.8905 9.3638 35.7983 16.0983 40.2224C22.8229 44.6401 32.2857 47.5 45.5 47.5V44.5C32.7143 44.5 23.8646 41.7349 17.7455 37.7151C11.6362 33.7017 8.12949 28.3595 6.15831 22.9836C4.18002 17.5883 3.75188 12.1623 3.82787 8.05902C3.86576 6.01284 4.02871 4.31025 4.18111 3.12488C4.25727 2.53257 4.33065 2.0705 4.38415 1.76049C4.4109 1.60551 4.43266 1.48864 4.4473 1.4126C4.45462 1.37458 4.46015 1.34678 4.46363 1.32953C4.46537 1.32091 4.4666 1.31493 4.46728 1.31163C4.46762 1.30999 4.46783 1.30901 4.46789 1.30871C4.46792 1.30856 4.46786 1.30884 4.46788 1.30876C4.46778 1.30921 4.46765 1.30984 3 1Z" fill="#E1CC0B"/>
-              </svg>            
+      </header>
+    <main class="flex flex-col gap-10 font-inter mb-24">
+        <section>
+            <div class="inner p-4 flex flex-col gap-4">
+                <span class="font-bold uppercase underline">explore</span>
+                <h1 class="font-black text-4xl uppercase">All Mintra Listings <span>(4000)</span></h1>
+                <p class="text-gray-600">Find a prouduct you like and bid before the time runs out!</p>
+                <div class="w-full relative flex gap-5">
+                        <label for="productSearch" id="searchIcon" class="absolute flex items-center h-full left-2">
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.0002 14L11.0095 11.004M12.6668 7.00001C12.6668 8.5029 12.0698 9.94424 11.0071 11.0069C9.9444 12.0697 8.50306 12.6667 7.00016 12.6667C5.49727 12.6667 4.05593 12.0697 2.99322 11.0069C1.93052 9.94424 1.3335 8.5029 1.3335 7.00001C1.3335 5.49712 1.93052 4.05578 2.99322 2.99307C4.05593 1.93037 5.49727 1.33334 7.00016 1.33334C8.50306 1.33334 9.9444 1.93037 11.0071 2.99307C12.0698 4.05578 12.6668 5.49712 12.6668 7.00001V7.00001Z" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round"/>
+                          </svg>
+                        </label>
+                        <input type="text" id="productSearch" class="py-4 w-full px-8 rounded-lg border border-gray-300" placeholder="Search"> 
+                        <button class="btn">Search</button>
+                </div>          
             </div>
-          </div>
-          <a href="./signup.html"><button class="btn">Sign up now</button></a>
-        </div>
+        </section>
+        <section>
+            <div class="inner flex flex-col md:flex-row h-fit p-4 gap-6">
+                <div class="h-full w-full max-w-xs bg-[#FBFAFA] sticky top-20 z-10">
+                    <div class="flex gap-4 flex-col w-full"> 
+                        <h2 class="font-bold">Filter items based on:</h2>
+                        <select name="Filter" id="filter" aria-placeholder="filter" class="w-full px-2 py-2 border-gray-400 outline-gray-400 border rounded-md cursor-pointer">
+                                <option class="cursor-pointer">Newest products</option>
+                                <option class="cursor-pointer">Oldest products</option>
+                        </select>
+                        <select name="active" id="filter" aria-placeholder="filter" class="w-full px-2 py-2 border-gray-400 outline-gray-400 border rounded-md cursor-pointer">
+                                <option class="cursor-pointer">Active Listings</option>
+                                <option class="cursor-pointer">Ended Listings</option>
+                        </select>
+                        <div class="btn cursor-pointer"> List New Item </div>
+                </div>
+                </div>
+            <div id="listingGrid" class="grid grid-cols-1 sm:gird-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4">  
+            </div> 
+            </div>
       </section>
     </main>
     <footer class="px-6 py-6 border-t border-gray-200 font-inter">
@@ -97,7 +103,7 @@
         <p class="text-gray-500">Designed and developed by <a href="https://matsfjeldstad.no/" class="underline">Mats Fjeldstad</a></p>
       </div>
     </footer>
-    <script type="module" src="./js/main.js"></script>
-    <script type="module" src="./js/landing-page.js"></script>
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/landing-page.js"></script>
   </body>
 </html>

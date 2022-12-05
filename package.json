@@ -25,5 +25,8 @@
   },
   "lint-staged": {
     "*.js": "eslint --fix"
+  },
+  "dependencies": {
+    "tiny-slider": "^2.9.4"
   }
 }
