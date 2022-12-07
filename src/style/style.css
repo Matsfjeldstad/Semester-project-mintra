@@ -23,7 +23,7 @@
   }
 
   .btn{
-    @apply flex justify-center items-center duration-100 py-4 px-6 bg-[#141414] text-white rounded-md hover:bg-[#4B4B4B] 
+    @apply flex justify-center items-center duration-100 py-4 px-6 bg-[#141414] text-white rounded-md hover:bg-[#4B4B4B] disabled:bg-gray-400
   }
 
   .card{

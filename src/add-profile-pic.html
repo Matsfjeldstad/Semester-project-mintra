@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&family=Poppins:wght@800&display=swap" rel="stylesheet">
+    <title>Mintra App</title>
+  </head>
+  <body class="bg-[#FBFAFA] font-inter">
+    <header>
+    </header>
+    <main class="w-full h-screen flex items-center">
+      <div class="inner p-4 flex flex-col gap-6 items-center">
+        <span class="font-poppins text-18 font-extrabold text-[#444444] text-xl">MINTRA</span>
+        <h1 class="font-bold text-3xl text-[#444444] uppercase text-center">Welcome, <span id="headingName"></span></h1>
+        <div class="h-28 w-28 bg-red-400 rounded-full overflow-hidden flex justify-center items-center relative">
+          <span id="backupPic" class="text-5xl font-bold text-white">M</span>
+          <img id ="avatarImg" alt="" class="avatarIMG w-full h-full object-cover hidden">
+        </div>
+        <p class="text-center text-sm">Welcome to Mintra, <span id="paragraphName">name</span>! Here you can add a profile picture! <br> This needs to be a valid and working URL</p>
+        <form id="avatarForm" action="" class="flex flex-col gap-4 w-full max-w-md">
+          <input id="imgURLInput" type="text" class="form-input" placeholder="Image URL">
+          <button id="uploadBTN" class="btn" disabled> Add Profile Pic</button>
+        </form>
+        <a href="/" class="underline">skip for now</a>
+      </div>
+    </main>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/add-avatar-page.js"></script>
+  </body>
+</html>

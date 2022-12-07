@@ -1,4 +1,4 @@
-import { signupURL } from '../endpoints';
+import { signupURL } from '../api/endpoints';
 import loginUser from './login-Function';
 
 async function signUpUser(signUpUserData, errorField) {
@@ -15,13 +15,14 @@ async function signUpUser(signUpUserData, errorField) {
       const errorContainer = errorField;
       errorContainer.classList.remove('opacity-0');
       errorContainer.classList.add('opacity-1');
-      errorContainer.innerHTML = data.errors[0].message;
+      errorContainer.innerHTML = data.errors[0].message
+        ? data.errors[0].message : data.errors.status;
     } else {
       const loginBody = {
         email: signUpUserData.email,
         password: signUpUserData.password,
       };
-      loginUser(loginBody);
+      loginUser(loginBody, '', '/add-profile-pic.html');
     }
   } catch (e) {
     // eslint-disable-next-line no-console
@@ -29,4 +30,4 @@ async function signUpUser(signUpUserData, errorField) {
   }
 }
 
-export default { signUpUser };
+export default signUpUser;
