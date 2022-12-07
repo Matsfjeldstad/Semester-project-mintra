@@ -13,7 +13,6 @@ hamburgerMenu.onclick = function menuOpen() {
   navTest.forEach((test) => {
     test.classList.toggle('animate-in');
   });
-  console.log(navTest);
 };
 
 // const card = newCard('https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg', 'a new rock', 20, '1h 13m 14s', 'abcdefg');
@@ -22,5 +21,4 @@ const links = ['./img/no-internet.jpg', 'https://www.dmarge.com/wp-content/uploa
 
 for (let i = 0; i < 24; i += 1) {
   listingGrid.innerHTML += newCard(links, 'a new rock', 20, '1h 13m 14s', `abcdefg${i}`).outerHTML;
-  console.log(links.length);
 }
