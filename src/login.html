@@ -36,18 +36,21 @@
             <div class="p-6 h-full md:w-[50%] lg:w-[40%] w-full">
               <div class="h-full w-full flex flex-col justify-center items-center gap-4">
                 <h1 class="flex flex-col items-center text-3xl">Welcome to <span class="font-poppins text-18 font-extrabold text-[#E1CC0B] text-6xl">MINTRA</span></h1>
-                <form action="" class="flex flex-col gap-4 w-full max-w-md">
+                <form id="loginForm" action="" class="flex flex-col gap-4 w-full max-w-md">
                   <div class="flex flex-col">
                     <label for="loginEmail" class="font-bold">Your Email</label>
                     <input id="loginEmail" type="text" class="form-input" placeholder="Your Email">
+                    <label for="loginEmail" class="errorContainer"></label>
                   </div>
                   <div class="flex flex-col">
                     <label for="loginPassword" class="font-bold">Your Password</label>
                     <input id="loginPassword" type="password" class="form-input" placeholder="Your password">
+                    <label for="loginPassword" class="errorContainer"></label>
                   </div>
-                  <button class="btn"> Login</button>
+                  <span class="responseErrorField duration-300 p-4 bg-red-300 text-red-900 opacity-0"></span>
+                  <button class="btn"> Login </button>
                 </form>
-                <div>Don’t have an accout?<a href="./signup.html" class="font-bold underline">Sign Up!</a></div>
+                <div>Don’t have an account?<a href="./signup.html" class="font-bold underline">Sign Up!</a></div>
               </div>
             </div>
         </section>
