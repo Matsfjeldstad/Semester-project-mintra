@@ -22,3 +22,5 @@ const links = ['./img/no-internet.jpg', 'https://www.dmarge.com/wp-content/uploa
 for (let i = 0; i < 24; i += 1) {
   listingGrid.innerHTML += newCard(links, 'a new rock', 20, '1h 13m 14s', `abcdefg${i}`).outerHTML;
 }
+
+// mynav();

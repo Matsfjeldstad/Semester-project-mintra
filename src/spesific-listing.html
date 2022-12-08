@@ -10,57 +10,56 @@
   </head>
   <body class="bg-[#FBFAFA] font-inter">
     <header>
-      <div id="headerNav" class=" h-20 bg-[#FBFAFA] relative z-10">
-        <div class="inner h-full px-6 flex items-center justify-between">
-          <a href="/" id="header-logo" class="font-poppins text-[20px] sm:text-[32px] font-extrabold">MINTRA</a>
-          <div id="hamburger" class="w-fit h-8 sm:hidden relative flex flex-col justify-center items-end gap-1 transition-all duration-200">
-            <div id="hamburgerLine" class="hamburger-line"></div>
-          </div>
-          <nav id="desktopNav" class="w-fit h-full flex-row gap-10 hidden items-center sm:flex">
-            <a href="#" class="test relative font-bold after:h-0.5 after:w-0 after:absolute after:bg-black after:left-0 after:bottom-0">Explore</a>
-            <!-- <a href="#" class="test font-bold">Log in</a> -->
-            <a href="#" id="logedin" class="test font-bold">Dashboard</a>
-            <!-- <a href="#" class="test font-bold">Sign up</a> -->
-           
-            <div id="userButton" class="test bg-[#FBFAFA] border border-gray-300 w-fit h-fit py-1 pl-2 pr-4 rounded-full flex items-center gap-3">
-              <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="w-8 h-8 rounded-full object-cover">
-              <div class="text-black">
-              hello(name)
-              </div>
-              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L5 5L9 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>                  
+        <div id="headerNav" class=" h-20 bg-[#FBFAFA] relative z-10">
+          <div class="inner h-full px-6 flex items-center justify-between">
+            <a href="#" id="header-logo" class="font-poppins text-[20px] sm:text-[32px] font-extrabold">MINTRA</a>
+            <div id="hamburger" class="w-fit h-8 sm:hidden relative flex flex-col justify-center items-end gap-1 transition-all duration-200">
+              <div id="hamburgerLine" class="hamburger-line"></div>
             </div>
-          </nav>
-          <div id="mobileNav" class="duration-300 absolute  h-0 bg-[#FBFAFA] left-0 top-20 overflow-hidden sm:hidden">
-            <nav class="w-full h-full p-6 flex flex-col gap-10">
-              <div class="w-full relative">
-                <label id="searchIcon" for="searchInput" class="absolute left-2 top-3">
-                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14.0002 14L11.0095 11.004M12.6668 7.00001C12.6668 8.5029 12.0698 9.94424 11.0071 11.0069C9.9444 12.0697 8.50306 12.6667 7.00016 12.6667C5.49727 12.6667 4.05593 12.0697 2.99322 11.0069C1.93052 9.94424 1.3335 8.5029 1.3335 7.00001C1.3335 5.49712 1.93052 4.05578 2.99322 2.99307C4.05593 1.93037 5.49727 1.33334 7.00016 1.33334C8.50306 1.33334 9.9444 1.93037 11.0071 2.99307C12.0698 4.05578 12.6668 5.49712 12.6668 7.00001V7.00001Z" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-                </label>
-                <input type="text" id="searchInput" class="py-2 w-full px-8 rounded-xl border border-gray-300" placeholder="Search"> 
-              </div>
-              <a href="#" class="test font-bold">Explore</a>
-              <a href="#" class="test font-bold">Log in</a>
-              <a href="#" id="logedin" class="test font-bold">Dashboard</a>
-              <a href="#" class="test font-bold">Sign up</a>
-             
-              <div id="userButton" class="test bg-[#FBFAFA] border border-gray-300 w-fit py-2 pl-2 pr-4 rounded-full flex items-center gap-3">
+            <nav id="desktopNav" class="w-fit h-full flex-row gap-10 hidden items-center sm:flex">
+              <a href="#" class="test relative font-bold after:h-0.5 after:w-0 after:absolute after:bg-black after:left-0 after:bottom-0">Explore</a>
+              <a href="#" class="loggedOutLink test font-bold">Log in</a>
+              <a href="#" id="deskt" class="loggedInLink test font-bold">Dashboard</a>
+              <a href="#" class="loggedOutLink test font-bold">Sign up</a>
+              <div id="userButton" class="loggedInLink test bg-[#FBFAFA] border border-gray-300 w-fit h-fit py-1 pl-2 pr-4 rounded-full flex items-center gap-3">
                 <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="w-8 h-8 rounded-full object-cover">
                 <div class="text-black">
-                hello(name)
+                hello, <span class ='buttonName'></span>
                 </div>
                 <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 1L5 5L9 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>                  
+                  </svg>                  
+              </div>
+            </nav>
+            <nav id="mobileNav" class="duration-300 absolute  h-0 bg-[#FBFAFA] left-0 top-20 overflow-hidden sm:hidden">
+              <div class="w-full h-full p-6 flex flex-col gap-10">
+                <div class="w-full relative">
+                  <label id="searchIcon" for="searchInput" class="absolute left-2 top-3">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.0002 14L11.0095 11.004M12.6668 7.00001C12.6668 8.5029 12.0698 9.94424 11.0071 11.0069C9.9444 12.0697 8.50306 12.6667 7.00016 12.6667C5.49727 12.6667 4.05593 12.0697 2.99322 11.0069C1.93052 9.94424 1.3335 8.5029 1.3335 7.00001C1.3335 5.49712 1.93052 4.05578 2.99322 2.99307C4.05593 1.93037 5.49727 1.33334 7.00016 1.33334C8.50306 1.33334 9.9444 1.93037 11.0071 2.99307C12.0698 4.05578 12.6668 5.49712 12.6668 7.00001V7.00001Z" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </label>
+                  <input type="text" id="searchInput" class="py-2 w-full px-8 rounded-xl border border-gray-300" placeholder="Search"> 
+                </div>
+                <a href="#" class="test font-bold">Explore</a>
+                <a href="#" class="loggedOutLink test font-bold">Log in</a>
+                <a href="#"  class="loggedInLink test font-bold">Dashboard</a>
+                <a href="#" class="loggedOutLink test font-bold">Sign up</a>
+               
+                <div id="userButton" class="loggedInLink test bg-[#FBFAFA] border border-gray-300 w-fit py-2 pl-2 pr-4 rounded-full flex items-center gap-3">
+                  <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="w-8 h-8 rounded-full object-cover">
+                  <div class="text-black">
+                  hello, <span class ='buttonName'></span>
+                  </div>
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L5 5L9 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>                  
+                </div>
               </div>
             </nav>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
     <main class="flex flex-col gap-24 font-inter mb-24">
         <section>
             <div class="inner flex flex-col-reverse md:flex-row gap-6 md:gap-10 h-fit justify-center items-center p-4">
@@ -200,6 +199,6 @@
       </div>
     </footer>
     <script type="module" src="./js/main.js"></script>
-    <script type="module" src="./js/landing-page.js"></script>
+    <script type="module" src="./js/spesific-page.js"></script>
   </body>
 </html>
