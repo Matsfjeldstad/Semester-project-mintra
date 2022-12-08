@@ -56,7 +56,7 @@ imgURLInput.onkeyup = function checkUrl() {
   return isValid;
 };
 
-form.onsubmit = function (event) {
+form.onsubmit = function submitAvatarForm(event) {
   event.preventDefault();
   if (isValid) {
     const avatarObject = { avatar: imgURLInput.value };

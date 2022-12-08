@@ -6,14 +6,14 @@ const loginURL = `${BASE_API_URL}auth/login`;
 const signupURL = `${BASE_API_URL}auth/register`;
 
 // profiles endpoints
-export function allProfileURL(flag, flagBoolean = true) {
-  const profileURL = `${BASE_API_URL}profiles/profiles${flag ? `?${flag}=${flagBoolean}` : ''}`;
+export function allProfileURL(flag, flagParam = true) {
+  const profileURL = `${BASE_API_URL}profiles${flag ? `?${flag}=${flagParam}` : ''}`;
   return profileURL;
 }
 
 // listing endpoints¨
-export function allListingURL(flag, flagBoolean = true) {
-  const listingURL = `${BASE_API_URL}listings/profiles${flag ? `?${flag}=${flagBoolean}` : ''}`;
+export function allListingURL(flag, flagParam = true) {
+  const listingURL = `${BASE_API_URL}listings?_bids=true${flag ? `&${flag}=${flagParam}` : ''}`;
   return listingURL;
 }
 
