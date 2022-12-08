@@ -25,7 +25,7 @@ highestBid.className = 'font-bold text-[#242424]';
 const listingTimeContainer = document.createElement('div');
 listingTimeContainer.innerHTML = '<p class = "text-[#898888]" >Time left</p>';
 const timeLeft = document.createElement('p');
-timeLeft.className = 'font-bold text-[#242424]';
+timeLeft.className = 'timeLeft font-bold text-[#242424]';
 
 cardImgContainer.append(cardImg);
 listingTimeContainer.append(timeLeft);
@@ -42,12 +42,12 @@ export function lazyLoadCard() {
   return testCard;
 }
 
-export default function newCard(imgLink, listingName, listingBid, listingTime, listingId) {
-  cardImg.src = imgLink.length > 0 ? imgLink[0] : '../../img/mintra.jpg';
+export default function newCard(imgLink, listingName, listingBid, listingId) {
+  cardImg.src = imgLink.length > 0 ? imgLink[0] : '/img/mintra.jpg';
   listingTitle.innerHTML = listingName;
   // eslint-disable-next-line quotes
   card.href = `./spesific-listing.html?id=${listingId}`;
-  highestBid.innerHTML = listingBid ? `${listingBid}c` : '-c';
-  timeLeft.innerHTML = listingTime;
+  highestBid.innerHTML = listingBid;
+  card.id = listingId;
   return card;
 }
