@@ -17,23 +17,25 @@
             <div id="hamburgerLine" class="hamburger-line"></div>
           </div>
           <nav id="desktopNav" class="w-fit h-full flex-row gap-10 hidden items-center sm:flex">
-            <a href="#" class="test relative font-bold after:h-0.5 after:w-0 after:absolute after:bg-black after:left-0 after:bottom-0">Explore</a>
-            <!-- <a href="#" class="test font-bold">Log in</a> -->
-            <a href="#" id="logedin" class="test font-bold">Dashboard</a>
-            <!-- <a href="#" class="test font-bold">Sign up</a> -->
-           
-            <div id="userButton" class="test bg-[#FBFAFA] border border-gray-300 w-fit h-fit py-1 pl-2 pr-4 rounded-full flex items-center gap-3">
-              <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="w-8 h-8 rounded-full object-cover">
-              <div class="text-black">
-              hello(name)
+            <a href="/all-listings.html" class="test relative font-bold after:h-0.5 after:w-0 after:absolute after:bg-black after:left-0 after:bottom-0">Explore</a>
+            <a href="./login.html" class="loggedOutLink test font-bold">Log in</a>
+            <a href="#" id="deskt" class="loggedInLink test font-bold">Dashboard</a>
+            <a href="/signup.html" class="loggedOutLink test font-bold">Sign up</a>
+            <div id="userButton" class="loggedInLink text-white bg-[#222] border border-[#444] w-fit h-fit py-1.5 pl-1.5 pr-4 rounded-full flex items-center gap-3">
+              <div class="w-8 h-8 overflow-hidden relative rounded-full">
+                <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="w-full h-full rounded-full object-cover absolute">
+                <div id="backupAvatar" class="bg-red-400 w-full h-full flex justify-center items-center font-bold text-white capitalize"> M </div>
+              </div>
+              <div>
+              hello, <span class ='buttonName'></span>
               </div>
               <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L5 5L9 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 1L5 5L9 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>                  
             </div>
           </nav>
-          <div id="mobileNav" class="duration-300 absolute  h-0 bg-[#FBFAFA] left-0 top-20 overflow-hidden sm:hidden">
-            <nav class="w-full h-full p-6 flex flex-col gap-10">
+          <nav id="mobileNav" class="duration-300 absolute  h-0 bg-[#FBFAFA] left-0 top-20 overflow-hidden sm:hidden">
+            <div class="w-full h-full p-6 flex flex-col gap-10">
               <div class="w-full relative">
                 <label id="searchIcon" for="searchInput" class="absolute left-2 top-3">
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,21 +45,24 @@
                 <input type="text" id="searchInput" class="py-2 w-full px-8 rounded-xl border border-gray-300" placeholder="Search"> 
               </div>
               <a href="#" class="test font-bold">Explore</a>
-              <a href="#" class="test font-bold">Log in</a>
-              <a href="#" id="logedin" class="test font-bold">Dashboard</a>
-              <a href="#" class="test font-bold">Sign up</a>
+              <a href="/login.html" class="loggedOutLink test font-bold">Log in</a>
+              <a href="#"  class="loggedInLink test font-bold">Dashboard</a>
+              <a href="/signup.html" class="loggedOutLink test font-bold">Sign up</a>
              
-              <div id="userButton" class="test bg-[#FBFAFA] border border-gray-300 w-fit py-2 pl-2 pr-4 rounded-full flex items-center gap-3">
-                <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="w-8 h-8 rounded-full object-cover">
+              <div id="userButton" class="loggedInLink test bg-[#FBFAFA] border border-gray-300 w-fit py-2 pl-2 pr-4 rounded-full flex items-center gap-3">
+                <div class="w-8 h-8 overflow-hidden relative rounded-full">
+                  <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="w-full h-full rounded-full object-cover absolute">
+                  <div id="backupAvatar" class="bg-red-400 w-full h-full flex justify-center items-center font-bold text-white capitalize"> M </div>
+                </div>
                 <div class="text-black">
-                hello(name)
+                hello, <span class ='buttonName'></span>
                 </div>
                 <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 1L5 5L9 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>                  
               </div>
-            </nav>
-          </div>
+            </div>
+          </nav>
         </div>
       </div>
     </header>
