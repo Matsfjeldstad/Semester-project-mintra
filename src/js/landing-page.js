@@ -1,4 +1,5 @@
-import newCard from './components/productCard';
+import getListings from './components/fetch-listings';
+import newCard, { lazyLoadCard } from './components/productCard';
 
 const hamburgerMenu = document.querySelector('#hamburger');
 
@@ -17,10 +18,21 @@ hamburgerMenu.onclick = function menuOpen() {
 
 // const card = newCard('https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg', 'a new rock', 20, '1h 13m 14s', 'abcdefg');
 const listingGrid = document.querySelector('#listingGrid');
-const links = ['./img/no-internet.jpg', 'https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg', 'https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg'];
 
 for (let i = 0; i < 24; i += 1) {
-  listingGrid.innerHTML += newCard(links, 'a new rock', 20, '1h 13m 14s', `abcdefg${i}`).outerHTML;
+  listingGrid.innerHTML += lazyLoadCard().outerHTML;
 }
 
-// mynav();
+const listings = await getListings('limit', 24);
+listingGrid.innerText = '';
+
+listings.forEach((listing) => {
+  let bid;
+
+  if (listing.bids.length === 0) {
+    bid = 'no bids';
+  } else {
+    bid = listing.bids[listing.bids.length - 1].amount;
+  }
+  listingGrid.innerHTML += newCard(listing.media, listing.title, bid, '1h 13m 14s', listing.id).outerHTML;
+});
