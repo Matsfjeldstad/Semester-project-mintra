@@ -1,5 +1,3 @@
-import { userName } from '../utils/localStorageUser';
-
 // base Url for the Noroff API
 const BASE_API_URL = 'https://nf-api.onrender.com/api/v1/auction/';
 
@@ -26,8 +24,10 @@ function makeBidURL(id) {
   const URL = `${BASE_API_URL}listings/${id}/bids?_bids=true`;
   return URL;
 }
-
-const checkCreditURL = `${BASE_API_URL}profiles/${userName}/credits`;
+function checkCreditURL(userName) {
+  const URL = `${BASE_API_URL}profiles/${userName}/credits`;
+  return URL;
+}
 
 export {
   loginURL, signupURL, allListingURL, singleListingURL, makeBidURL, checkCreditURL,

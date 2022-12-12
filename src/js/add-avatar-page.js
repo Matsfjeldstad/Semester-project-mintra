@@ -40,19 +40,19 @@ async function updateAvatar(name, url) {
 }
 
 let isValid;
+
 imgURLInput.onkeyup = function checkUrl() {
+  avatarIMG.src = imgURLInput.value;
   avatarIMG.onload = function loadImg() {
     avatarIMG.className = 'duration-300 avatarIMG w-full h-full object-cover absolute top-0 left-0';
     uploadBTN.disabled = false;
     isValid = true;
   };
-  avatarIMG.onerror = function errorImg(e) {
-    e.target.className = 'avatarIMG w-full h-full object-cover hidden';
+  avatarIMG.onerror = function errorImg() {
+    avatarIMG.className = 'avatarIMG w-full h-full object-cover hidden';
     uploadBTN.disabled = true;
     isValid = false;
   };
-  avatarIMG.src = imgURLInput.value;
-
   return isValid;
 };
 

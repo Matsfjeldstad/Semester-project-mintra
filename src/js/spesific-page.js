@@ -16,7 +16,7 @@ const noBidsContainer = document.querySelector('#noBids');
 const bidInput = document.querySelector('#bidInput');
 const bidFormBtn = document.querySelector('#bidBtn');
 const makeBidForm = document.querySelector('#makeBidForm');
-const img = document.querySelector('img');
+const img = document.querySelector('#listingImg');
 const highestBidHandler = document.querySelector('#highestBidHandler');
 const userCredits = document.querySelector('#userCredits');
 
@@ -80,14 +80,20 @@ checkIMG(profileAvatar);
 profileName.innerHTML = listing.seller.name;
 // eslint-disable-next-line prefer-destructuring
 backupAvatar.innerHTML = listing.seller.name[0];
+let curentUser = '';
 
-const curentUser = JSON.parse(localStorage.getItem('user')).name;
-
-async function updateUserbalance() {
-  const userCreditsData = await getUserCredits();
+async function updateUserbalance(name, token) {
+  const userCreditsData = await getUserCredits(name, token);
   userCredits.innerHTML = `${userCreditsData.credits}c`;
 }
-updateUserbalance();
+if (!localStorage.user) {
+  userCredits.parentElement.parentElement.remove();
+} else {
+  curentUser = JSON.parse(localStorage.getItem('user')).name;
+  const usertoken = JSON.parse(localStorage.user).accessToken;
+  const userName = JSON.parse(localStorage.user).name;
+  updateUserbalance(userName, usertoken);
+}
 
 if (listing.bids.length > 0 && lastBid.bidderName === curentUser) {
   bidFormBtn.disabled = true;
@@ -103,6 +109,8 @@ makeBidForm.onsubmit = async function (event) {
     highestBidHandler.classList.remove('hidden');
     bidFormBtn.disabled = true;
     currentBid.innerHTML = `${bidData.bids[bidData.bids.length - 1].amount}c`;
-    updateUserbalance();
+    const usertoken = JSON.parse(localStorage.user).accessToken;
+    const userName = JSON.parse(localStorage.user).name;
+    updateUserbalance(userName, usertoken);
   }
 };
