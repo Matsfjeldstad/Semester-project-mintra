@@ -13,7 +13,7 @@ export function allProfileURL(flag, flagParam = true) {
 
 // listing endpoints¨
 export function allListingURL(flag, flagParam = true) {
-  const listingURL = `${BASE_API_URL}listings?_bids=true${flag ? `&${flag}=${flagParam}` : ''}`;
+  const listingURL = `${BASE_API_URL}listings?_bids=true&sort=created&sortOrder=desc${flag ? `&${flag}=${flagParam}` : ''}`;
   return listingURL;
 }
 
