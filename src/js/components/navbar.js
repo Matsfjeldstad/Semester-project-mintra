@@ -1,15 +1,7 @@
+import checkIMG from './checkImg';
+
 const navBars = document.querySelectorAll('nav');
 const userObject = JSON.parse(localStorage.getItem('user'));
-
-function checkIMG(imgElement) {
-  const img = imgElement;
-  img.onload = function loadImg() {
-    img.className = 'duration-300 avatarIMG w-full h-full object-cover absolute top-0 left-0';
-  };
-  img.onerror = function errorImg() {
-    img.remove();
-  };
-}
 
 export default function mynav() {
   navBars.forEach((navBar) => {

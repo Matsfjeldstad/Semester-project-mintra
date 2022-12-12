@@ -1,4 +1,5 @@
-import getListings from './components/fetch-listings';
+import countdown from './components/countdown';
+import { getListings } from './components/fetch-listings';
 import newCard, { lazyLoadCard } from './components/productCard';
 
 const hamburgerMenu = document.querySelector('#hamburger');
@@ -39,19 +40,52 @@ for (let i = 0; i < 24; i += 1) {
 const allListings = async () => {
   const listings = await getListings('limit', 24);
   listingGrid.innerText = '';
-  listings.forEach((listing) => {
+  await listings.forEach((listing) => {
     let bid;
-
     if (listing.bids.length === 0) {
       bid = 'no bids';
     } else {
-      bid = listing.bids[listing.bids.length - 1].amount;
+      bid = `${listing.bids[listing.bids.length - 1].amount}c`;
     }
-    listingGrid.innerHTML += newCard(listing.media, listing.title, bid, listing.id).outerHTML;
+    const cards = newCard(listing.media, listing.title, bid, listing.id);
+    listingGrid.innerHTML += cards.outerHTML;
+    const allCards = listingGrid.querySelectorAll('.card');
+    const timeLeftElements = new Map();
+    const endsAtValues = new Map();
+
+    allCards.forEach((card) => {
+      const timeLeft = card.querySelector('.timeLeft');
+      timeLeftElements.set(card.id, timeLeft);
+      // Find the correct listing object for this card
+      const currentListing = listings.find((list) => list.id === card.id);
+      if (currentListing) {
+        endsAtValues.set(card.id, currentListing.endsAt);
+      }
+    });
+
+    timeLeftElements.forEach((timeLeft, id) => {
+      const endsAt = endsAtValues.get(id);
+      if (endsAt) {
+        const time = countdown(endsAt);
+        const timeLeftContainer = timeLeft;
+        timeLeftContainer.innerText = time;
+      }
+    });
+
+    setInterval(() => {
+      timeLeftElements.forEach((timeLeft, id) => {
+        const endsAt = endsAtValues.get(id);
+        if (endsAt) {
+          const time = countdown(endsAt);
+          const timeLeftContainer = timeLeft;
+          timeLeftContainer.innerText = time;
+        }
+      });
+    }, 1000);
 
     // setInterval(function (){
     //   console.log(countdown(listing.endsAt) );
     // }, 1000);
   });
 };
-allListings();
+await allListings();

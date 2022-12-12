@@ -17,17 +17,20 @@
               <div id="hamburgerLine" class="hamburger-line"></div>
             </div>
             <nav id="desktopNav" class="w-fit h-full flex-row gap-10 hidden items-center sm:flex">
-              <a href="#" class="test relative font-bold after:h-0.5 after:w-0 after:absolute after:bg-black after:left-0 after:bottom-0">Explore</a>
-              <a href="#" class="loggedOutLink test font-bold">Log in</a>
-              <a href="#" id="deskt" class="loggedInLink test font-bold">Dashboard</a>
-              <a href="#" class="loggedOutLink test font-bold">Sign up</a>
-              <div id="userButton" class="loggedInLink test bg-[#FBFAFA] border border-gray-300 w-fit h-fit py-1 pl-2 pr-4 rounded-full flex items-center gap-3">
-                <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="w-8 h-8 rounded-full object-cover">
-                <div class="text-black">
+              <a href="/all-listings.html" class="nav-link">Explore</a>
+              <a href="./login.html" class="loggedOutLink nav-link">Log in</a>
+              <a href="#" id="deskt" class="loggedInLink nav-link">Dashboard</a>
+              <a href="/signup.html" class="loggedOutLink nav-link">Sign up</a>
+              <div id="userButton" class="loggedInLink text-white bg-[#222] border border-[#444] w-fit h-fit py-1.5 pl-1.5 pr-4 rounded-full flex items-center gap-3">
+                <div class="w-8 h-8 overflow-hidden relative rounded-full">
+                  <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="w-full h-full rounded-full object-cover absolute">
+                  <div id="backupAvatar" class="bg-red-400 w-full h-full flex justify-center items-center font-bold text-white capitalize"> M </div>
+                </div>
+                <div>
                 hello, <span class ='buttonName'></span>
                 </div>
                 <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 1L5 5L9 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M1 1L5 5L9 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>                  
               </div>
             </nav>
@@ -42,12 +45,15 @@
                   <input type="text" id="searchInput" class="py-2 w-full px-8 rounded-xl border border-gray-300" placeholder="Search"> 
                 </div>
                 <a href="#" class="test font-bold">Explore</a>
-                <a href="#" class="loggedOutLink test font-bold">Log in</a>
+                <a href="/login.html" class="loggedOutLink test font-bold">Log in</a>
                 <a href="#"  class="loggedInLink test font-bold">Dashboard</a>
-                <a href="#" class="loggedOutLink test font-bold">Sign up</a>
+                <a href="/signup.html" class="loggedOutLink test font-bold">Sign up</a>
                
                 <div id="userButton" class="loggedInLink test bg-[#FBFAFA] border border-gray-300 w-fit py-2 pl-2 pr-4 rounded-full flex items-center gap-3">
-                  <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="w-8 h-8 rounded-full object-cover">
+                  <div class="w-8 h-8 overflow-hidden relative rounded-full">
+                    <img alt="" class="w-full h-full rounded-full object-cover absolute">
+                    <div id="backupAvatar" class="bg-red-400 w-full h-full flex justify-center items-center font-bold text-white capitalize"> M </div>
+                  </div>
                   <div class="text-black">
                   hello, <span class ='buttonName'></span>
                   </div>
@@ -59,54 +65,76 @@
             </nav>
           </div>
         </div>
-      </header>
+    </header>
     <main class="flex flex-col gap-24 font-inter mb-24">
         <section>
-            <div class="inner flex flex-col-reverse md:flex-row gap-6 md:gap-10 h-fit justify-center items-center p-4">
-                <div class="product-img w-[60%] h-[700px] rounded-xl overflow-hidden snap-mandatory">
-                    <img src="./img/no-internet.jpg" class="w-full h-full object-cover" alt="">
-                    <img src="./img/no-internet.jpg" class="w-full h-full object-cover" alt="">
-                    <img src="./img/no-internet.jpg" class="w-full h-full object-cover" alt="">
+            <div class="inner flex flex-col md:flex-row gap-6 md:gap-10 w-full md:h-[600px] justify-start items-center p-4 relative">
+                <div class="order-first w-full md:hidden">
+                    <h2 class=" font-bebas-neue text-7xl md:text-8xl text-[#E1CC0B] md:truncate w-full break-words ">Product Name</h2>     
                 </div>
-                <div class="flex flex-col justify-between gap-20">
-                    <div>
+                <div class="product-img w-full md:max-w-xl h-[450px] md:h-full rounded-xl overflow-hidden snap-mandatory">
+                    <img class="w-full h-full object-cover bg-gray-200 animate-pulse" alt="">
+                </div>
+                <div class="flex flex-col h-full objec justify-center gap-10 w-full md:w-[40%] text-center md:text-left">
+                    <div class="hidden md:flex flex-col">
                         <div class="font-poppins text-lg font-extrabold">MINTRA</div>
-                        <h1 class=" font-bebas-neue text-8xl text-[#E1CC0B]">Product Name</h1>     
+                        <h1 class=" font-bebas-neue text-6xl md:text-6xl text-[#E1CC0B] overflow-hidden w-full break-words truncate">Product Name</h1>     
                     </div>
-                    <div>
-                        <div class="capitalize flex flex-col md:flex-row items-center md:items-start gap-1 w-fit"> Time left of auction:<span class="font-medium text-xl flex gap-2 items-center w-fit">0d 0h 0m <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 0.5C8.68678 0.5 7.38642 0.758658 6.17317 1.2612C4.95991 1.76375 3.85752 2.50035 2.92893 3.42893C1.05357 5.3043 0 7.84784 0 10.5C0 13.1522 1.05357 15.6957 2.92893 17.5711C3.85752 18.4997 4.95991 19.2362 6.17317 19.7388C7.38642 20.2413 8.68678 20.5 10 20.5C12.6522 20.5 15.1957 19.4464 17.0711 17.5711C18.9464 15.6957 20 13.1522 20 10.5C20 9.18678 19.7413 7.88642 19.2388 6.67317C18.7362 5.45991 17.9997 4.35752 17.0711 3.42893C16.1425 2.50035 15.0401 1.76375 13.8268 1.2612C12.6136 0.758658 11.3132 0.5 10 0.5M14.2 14.7L9 11.5V5.5H10.5V10.7L15 13.4L14.2 14.7Z" fill="#383838"/>
-                            </svg>
-                            </span>
+                    <div class="flex flex-col items-center md:items-start gap-4">
+                        <div id="createdBy" class="flex gap-2 text-gray-400 justify-center md:justify-start items-center">
+                            <div>Created By:</div>
+                            <div class="flex items-center gap-1">
+                                <div class="w-9 h-9 rounded-full bg-red-400 flex justify-center items-center relative overflow-hidden">
+                                    <img id="listingCreatorAvatar" alt="" class="w-full h-full absolute top-0 object-cover">
+                                    <div id="listingCreatorBackupAvatar" class="text-white font-bold"> <div class="w-3 h-3 rounded-full border-white border-l-2 animate-spin"></div> </div>
+                                </div>
+                                <div id="listingCreatorName" class="text-[#444] font-medium">Name</div>
+                            </div>
                         </div>
-                        <div>Current Bid: <span class="font-medium text-xl">no bids</span></div>
+                        <div class="text-gray-400 capitalize flex flex-col items-center md:items-start gap-1 text-xs flex-wrap"> Time left of auction:
+                            <div class="flex gap-2 text-xl items-center">
+                                <span id="timeLeft" class="font-medium text-2xl text-[#444] ">
+                                    0d 0h 0m
+                                </span>
+                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-red-400">
+                                    <path d="M10 0.5C8.68678 0.5 7.38642 0.758658 6.17317 1.2612C4.95991 1.76375 3.85752 2.50035 2.92893 3.42893C1.05357 5.3043 0 7.84784 0 10.5C0 13.1522 1.05357 15.6957 2.92893 17.5711C3.85752 18.4997 4.95991 19.2362 6.17317 19.7388C7.38642 20.2413 8.68678 20.5 10 20.5C12.6522 20.5 15.1957 19.4464 17.0711 17.5711C18.9464 15.6957 20 13.1522 20 10.5C20 9.18678 19.7413 7.88642 19.2388 6.67317C18.7362 5.45991 17.9997 4.35752 17.0711 3.42893C16.1425 2.50035 15.0401 1.76375 13.8268 1.2612C12.6136 0.758658 11.3132 0.5 10 0.5M14.2 14.7L9 11.5V5.5H10.5V10.7L15 13.4L14.2 14.7Z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class = "text-gray-400">Current Bid: <span id="currentBid" class="font-medium text-2xl text-[#444]"></span></div>
+                        <div id="highestBidHandler" class="hidden border-green-400 border py-2 px-3 w-fit rounded-lg bg-green-200">🎉 You currently have the highest bid 🎉</div>
                     </div>
-                    <form action="" class="flex bg-red-200 overflow-hidden rounded-lg border border-gray-200 active:border-gray-700">
-                        <input class="outline-none p-4 w-full" type="number" value="5">
-                        <button class="btn w-full max-w-xs">Make offer</button>
+                    <form id="makeBidForm" action="" class="flex gap-4 rounded-lg w-full flex-col justify-between">
+                        <div class="flex w-full gap-3 flex-col md:flex-row">
+                            <input id="bidInput" class="outline-none p-4 w-full border border-gray-300 rounded-lg" type="number" min="1" value="1" placeholder="Add bid">
+                            <button id="bidBtn" class="btn w-full min-w-[150px] font-bold">Place Bid +</button>
+                        </div>
+                        <div class="flex gap-2 items-center justify-center md:justify-start">
+                            <svg width="200" height="176" viewBox="0 0 200 176" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-fit fill-gray-500">
+                             <path d="M184 32H24C21.8783 32 19.8434 31.1571 18.3431 29.6569C16.8429 28.1566 16 26.1217 16 24C16 21.8783 16.8429 19.8434 18.3431 18.3431C19.8434 16.8429 21.8783 16 24 16H160C162.122 16 164.157 15.1571 165.657 13.6569C167.157 12.1566 168 10.1217 168 8C168 5.87827 167.157 3.84344 165.657 2.34315C164.157 0.842856 162.122 0 160 0H24C17.6429 0.0263237 11.5537 2.56334 7.05852 7.05852C2.56334 11.5537 0.0263237 17.6429 0 24V152C0.0263237 158.357 2.56334 164.446 7.05852 168.941C11.5537 173.437 17.6429 175.974 24 176H184C188.243 176 192.313 174.314 195.314 171.314C198.314 168.313 200 164.243 200 160V48C200 43.7565 198.314 39.6869 195.314 36.6863C192.313 33.6857 188.243 32 184 32ZM148 116C145.627 116 143.307 115.296 141.333 113.978C139.36 112.659 137.822 110.785 136.913 108.592C136.005 106.399 135.768 103.987 136.231 101.659C136.694 99.3311 137.836 97.193 139.515 95.5147C141.193 93.8365 143.331 92.6936 145.659 92.2306C147.987 91.7676 150.399 92.0052 152.592 92.9135C154.785 93.8217 156.659 95.3598 157.978 97.3332C159.296 99.3066 160 101.627 160 104C160 107.183 158.736 110.235 156.485 112.485C154.235 114.736 151.183 116 148 116Z"/>
+                            </svg>
+                            <div class="flex gap-1 items-center"> 
+                                <div class="text-xs text-gray-500">Credit balance</div>
+                               <div id="userCredits" class="font-bold"></div>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
         </section>
         <section>
             <div class="inner p-4 flex justify-between flex-col md:flex-row gap-10 h-fit relative">
-                <div class=" bg-[#FBFAFA] border border-gray-300 h-[300px] w-full rounded-lg overflow-y-scroll sticky top-0">
+                <div class=" bg-[#FBFAFA] border border-gray-300 h-[300px] w-full rounded-lg overflow-y-scroll">
                     <div class="p-4 border-b border-gray-300 font-bold sticky top-0 bg-[#FBFAFA]">Desciption</div>
                     <div class="p-4">
-                        <div class="">Lorem ipsum dolor sit amet consectetur. Mi velit hendrerit fermentum fermentum egestas porta elementum. Nec varius sollicitudin enim nec fermentum nibh blandit morbi. Risus faucibus facilisis maecenas nunc quis at vitae sit enim. Tellus mauris viverra nibh aliquam at sit ullamcorper. Leo arcu elementum tincidunt mauris. Senectus mi vulputate curabitur velit arcu ligula.
-        
-                                Neque cras aenean quam neque. Consectetur dapibus penatibus habitasse id ut dignissim. Purus dui amet lacus ultricies at.Lorem ipsum dolor sit amet consectetur. Mi velit hendrerit fermentum fermentum egestas porta elementum. Nec varius sollicitudin enim nec fermentum nibh blandit morbi. Risus faucibus facilisis maecenas nunc quis at vitae sit enim. Tellus mauris viverra nibh aliquam at sit ullamcorpe
-                            
-                            r. Leo arcu elementum tincidunt mauris. Senectus mi vulputate curabitur velit arcu ligula. Neque cras aenean quam neq
-                            ue. Consectetur dapibus penatibus habitasse id ut dignissim. Purus dui amet lacus ultricies at.Lorem ipsum dolor sit amet consectetur. Mi velit hendrerit fermentum fermentum egestas porta elementum. Nec varius sollicitudin enim nec fermentum nibh blandit morbi. Risus faucibus facilisis maecenas nunc quis at vitae sit enim. Tellus mauris viverra nibh aliquam at sit ullamcorper. Leo arcu elementum tincidunt mauris. Senectus 
-                            mi vulputate curabitur velit arcu ligula. Neque cras aenean quam neque. Consectetur dapibus penatibus habitasse id ut dignissim. Purus dui amet lacus ultricies at.
+                        <div id="description" class="">
                         </div>
                     </div>
                 </div>
-                <div class=" bg-[#FBFAFA] border border-gray-300 h-[300px] w-full rounded-lg overflow-y-scroll">
+                <div class=" bg-[#FBFAFA] border border-gray-300 h-[300px] w-full rounded-lg overflow-y-scroll relative">
                     <div class="p-4 border-b border-gray-300 font-bold sticky top-0 bg-[#FBFAFA]">Offers</div>
-                    <table class="w-full text-sm text-left text-gray-500 relative">
-                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 sticky top-0">
+                    <table class="w-full text-sm text-left text-gray-500">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 sticky top-10">
                                 <tr>
                                     <th scope="col" class="py-3 px-6">
                                         Bidders name
@@ -119,75 +147,15 @@
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr class="bg-white border-b">
-                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap">
-                                        John doe
-                                    </th>
-                                    <td class="py-4 px-6">
-                                        11.11.22
-                                    </td>
-                                    <td class="py-4 px-6">
-                                        24c
-                                    </td>
-                                </tr>
-                                <tr class="bg-white border-b">
-                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap">
-                                        john doe
-                                    </th>
-                                    <td class="py-4 px-6">
-                                        11.11.22
-                                    </td>
-                                    <td class="py-4 px-6">
-                                        24c
-                                    </td>
-                                </tr>
-                                <tr class="bg-white border-b">
-                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap">
-                                        john doe
-                                    </th>
-                                    <td class="py-4 px-6">
-                                        11.11.22
-                                    </td>
-                                    <td class="py-4 px-6">
-                                        24c
-                                    </td>
-                                </tr>
-                                <tr class="bg-white border-b">
-                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap">
-                                        john doe
-                                    </th>
-                                    <td class="py-4 px-6">
-                                        11.11.22
-                                    </td>
-                                    <td class="py-4 px-6">
-                                        24c
-                                    </td>
-                                </tr>
-                                <tr class="bg-white border-b">
-                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap">
-                                        Microsoft Surface Pro
-                                    </th>
-                                    <td class="py-4 px-6">
-                                        White
-                                    </td>
-                                    <td class="py-4 px-6">
-                                        24c PC
-                                    </td>
-                                </tr>
-                                <tr class="bg-white">
-                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap">
-                                        Magic Mouse 2
-                                    </th>
-                                    <td class="py-4 px-6">
-                                        Black
-                                    </td>
-                                    <td class="py-4 px-6">
-                                        Accessories
-                                    </td>
-                                </tr>
+                            <tbody>           
                             </tbody>
                     </table>
+                    <div id="noBids" class="w-full flex flex-row-reverse justify-center h-fit text-gray-400 p-4">
+                        No bids...
+                        <svg width="20" height="20" viewBox="0 0 20 20" class=" fill-gray-400" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.388 0.404993C19.33 0.260505 19.2185 0.143946 19.0768 0.0795646C18.935 0.0151834 18.7739 0.00793688 18.6269 0.0593324C18.4799 0.110728 18.3584 0.216808 18.2877 0.355506C18.2169 0.494203 18.2024 0.654838 18.247 0.803993C19.176 3.47399 17.332 5.46799 15.926 6.53599L15.358 5.72199C15.167 5.44899 14.74 5.22199 14.408 5.21799L11.22 5.23199C10.8306 5.24375 10.4516 5.36054 10.123 5.56999L0.729048 12.157C0.510543 12.3108 0.361867 12.5448 0.315573 12.808C0.269279 13.0711 0.32914 13.3419 0.482048 13.561L4.75105 19.669C5.07105 20.124 5.58205 20.069 6.03805 19.751L15.432 13.163C15.702 12.972 16.014 12.56 16.124 12.245L17.122 9.09999C17.232 8.78599 17.165 8.30699 16.974 8.03399L16.628 7.53799C18.516 6.09099 20.476 3.53399 19.388 0.404993ZM15.017 9.76299C14.844 9.88413 14.6488 9.96999 14.4425 10.0156C14.2362 10.0613 14.023 10.0659 13.815 10.0291C13.607 9.99233 13.4082 9.91493 13.2301 9.80132C13.0521 9.68771 12.8981 9.54012 12.777 9.36699C12.532 9.01665 12.4359 8.58338 12.51 8.16229C12.584 7.7412 12.8221 7.3667 13.172 7.12099C13.4464 6.92881 13.7739 6.82714 14.1088 6.83018C14.4437 6.83323 14.7693 6.94085 15.04 7.13799C14.768 7.30199 14.581 7.39799 14.546 7.41299C14.4221 7.4721 14.3219 7.57156 14.2618 7.69507C14.2018 7.81858 14.1855 7.95882 14.2156 8.09281C14.2457 8.2268 14.3204 8.3466 14.4275 8.43257C14.5346 8.51854 14.6677 8.56558 14.805 8.56599C14.891 8.56599 14.979 8.54599 15.062 8.50699C15.256 8.41499 15.464 8.30599 15.681 8.17699C15.731 8.47705 15.6951 8.78511 15.5777 9.0657C15.4602 9.34629 15.2659 9.58799 15.017 9.76299Z"/>
+                        </svg>
+                    </div> 
                 </div>
             </div>
         </section>

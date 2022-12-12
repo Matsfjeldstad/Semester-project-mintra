@@ -1,3 +1,5 @@
+import { userName } from '../utils/localStorageUser';
+
 // base Url for the Noroff API
 const BASE_API_URL = 'https://nf-api.onrender.com/api/v1/auction/';
 
@@ -12,9 +14,21 @@ export function allProfileURL(flag, flagParam = true) {
 }
 
 // listing endpoints¨
-export function allListingURL(flag, flagParam = true) {
+function allListingURL(flag, flagParam = true) {
   const listingURL = `${BASE_API_URL}listings?_bids=true&sort=created&sortOrder=desc${flag ? `&${flag}=${flagParam}` : ''}`;
   return listingURL;
 }
+function singleListingURL(id) {
+  const URL = `${BASE_API_URL}listings/${id}/?_seller=true&_bids=true`;
+  return URL;
+}
+function makeBidURL(id) {
+  const URL = `${BASE_API_URL}listings/${id}/bids?_bids=true`;
+  return URL;
+}
 
-export { loginURL, signupURL };
+const checkCreditURL = `${BASE_API_URL}profiles/${userName}/credits`;
+
+export {
+  loginURL, signupURL, allListingURL, singleListingURL, makeBidURL, checkCreditURL,
+};
