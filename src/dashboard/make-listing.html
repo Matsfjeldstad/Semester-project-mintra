@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&family=Poppins:wght@800&display=swap" rel="stylesheet">
+    <title>Mintra App</title>
+  </head>
+  <body class="bg-[#fff] font-inter flex flex-col sm:flex-row">
+    <header class="bg-white flex flex-row sm:flex-col justify-between sm:border-r sm:h-screen w-full sm:w-[20%] min-w-fit border-b sm:border-b-0 sticky top-0 h-20 z-50 px-4 items-center">    
+          <div class="flex flex-col gap-10 h-fit sm:h-full sm:p-4">
+            <a href="#" id="header-logo" class="font-poppins text-[20px] sm:text-[32px] font-extrabold">MINTRA</a>
+            <nav id="dashboardNav" class="duration-200 bg-white h-full flex flex-col top-20 sm:top-0 left-0 w-full justify-between absolute sm:relative gap-10 overflow-hidden h-0 sm:h-full">
+              <div class="flex flex-col gap-6 m-4 sm:m-0">
+                <a href="#" class="dashboard-nav">
+                  <svg width="19" height="17" viewBox="0 0 19 17" class="fill-[#414141]" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.19785 15.8276V10.8276H11.1979V15.8276C11.1979 16.3776 11.6479 16.8276 12.1979 16.8276H15.1979C15.7479 16.8276 16.1979 16.3776 16.1979 15.8276V8.82761H17.8979C18.3579 8.82761 18.5779 8.25761 18.2279 7.95761L9.86785 0.427607C9.48785 0.0876074 8.90785 0.0876074 8.52785 0.427607L0.167852 7.95761C-0.172148 8.25761 0.0378519 8.82761 0.497852 8.82761H2.19785V15.8276C2.19785 16.3776 2.64785 16.8276 3.19785 16.8276H6.19785C6.74785 16.8276 7.19785 16.3776 7.19785 15.8276Z"/>
+                  </svg>Dashboard</a>
+                <a  href="#" class="dashboard-nav">
+                  <svg width="16" height="17" viewBox="0 0 16 17" class="fill-[#414141]" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.2931 1.08882C15.1474 0.941391 14.9738 0.824433 14.7824 0.744761C14.591 0.66509 14.3857 0.624297 14.1783 0.62476H9.85658C9.57308 0.625288 9.30123 0.737591 9.10002 0.937299L0.46037 9.57519C0.165568 9.8706 0 10.2709 0 10.6882C0 11.1056 0.165568 11.5059 0.46037 11.8013L4.57365 15.9146C4.86913 16.2095 5.26956 16.3751 5.68705 16.3751C6.10454 16.3751 6.50497 16.2095 6.80045 15.9146L15.4366 7.28019C15.6367 7.0793 15.7494 6.80753 15.7502 6.52398V2.19976C15.7515 1.99353 15.7117 1.78911 15.6332 1.59839C15.5548 1.40766 15.4392 1.23445 15.2931 1.08882ZM12.3752 5.12476C12.1527 5.12476 11.9352 5.05878 11.7502 4.93516C11.5652 4.81155 11.421 4.63585 11.3358 4.43028C11.2507 4.22471 11.2284 3.99851 11.2718 3.78028C11.3152 3.56205 11.4223 3.3616 11.5797 3.20426C11.737 3.04693 11.9375 2.93978 12.1557 2.89638C12.3739 2.85297 12.6001 2.87525 12.8057 2.9604C13.0113 3.04554 13.187 3.18974 13.3106 3.37474C13.4342 3.55975 13.5002 3.77726 13.5002 3.99976C13.5002 4.29813 13.3816 4.58428 13.1707 4.79525C12.9597 5.00623 12.6735 5.12476 12.3752 5.12476Z"/>
+                  </svg>
+                   Your Listings</a>
+                <a  href="#" class="dashboard-nav">
+                  <svg width="18" height="19" viewBox="0 0 18 19" class="fill-[#414141]" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.7817 2.42857V0.5H3.21429V2.42857H0V3.95536C0 5.24107 0.381696 6.47817 1.07518 7.43522C1.61076 8.17451 2.44808 8.68478 3.20103 8.93027C3.4196 10.1071 4.01263 11.2257 5.21759 12.1377C6.10152 12.8071 7.16424 13.2977 8.11607 13.4982V16.7321H5.14286V18.5H12.8571V16.7321H9.88393V13.4982C10.8358 13.2973 11.8981 12.8071 12.7824 12.1377C13.9878 11.2257 14.5804 10.1071 14.799 8.93027C15.5519 8.68478 16.3892 8.17451 16.9248 7.43522C17.6183 6.47817 18 5.24107 18 3.95536V2.42857H14.7817ZM2.50714 6.39821C2.07804 5.80839 1.81728 5.01607 1.77429 4.19643H3.21429V6.90326C3.05598 6.85746 2.69518 6.65737 2.50714 6.39821ZM15.4929 6.39821C15.308 6.66379 15.0268 6.90366 14.7857 6.90366C14.7857 6.00366 14.7857 5.04379 14.7837 4.19643H16.2261C16.1827 5.01607 15.9107 5.79955 15.4929 6.39821Z"/>
+                  </svg>
+                   Auction Wins</a>
+                <a  href="#" class="dashboard-nav">
+                  <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-[#414141]">
+                  <path d="M9.97016 0.500002C10.2348 0.500002 10.4715 0.664702 10.5606 0.911302L11.196 2.6726C11.4237 2.7293 11.619 2.786 11.7846 2.8454C11.9655 2.9102 12.1986 3.0083 12.4866 3.1424L13.9662 2.3594C14.0869 2.29542 14.2252 2.27232 14.3602 2.29358C14.4952 2.31484 14.6197 2.3793 14.715 2.4773L16.0164 3.8228C16.1892 4.0019 16.2378 4.2638 16.1406 4.4924L15.4467 6.1187C15.5619 6.3302 15.6537 6.5111 15.7239 6.6623C15.7995 6.827 15.8931 7.0538 16.0047 7.3463L17.622 8.0393C17.865 8.1428 18.0153 8.3858 17.9991 8.6459L17.8803 10.5134C17.8721 10.6347 17.8286 10.751 17.755 10.8478C17.6814 10.9446 17.581 11.0176 17.4663 11.0579L15.9345 11.6024C15.8904 11.8139 15.8445 11.9948 15.7959 12.1478C15.7175 12.3841 15.628 12.6166 15.5277 12.8444L16.2972 14.5454C16.3515 14.6649 16.3661 14.7987 16.3389 14.9271C16.3117 15.0555 16.2441 15.1719 16.146 15.2591L14.6826 16.5659C14.5862 16.6516 14.4659 16.7058 14.3379 16.7212C14.2099 16.7367 14.0802 16.7126 13.9662 16.6523L12.4578 15.8531C12.2218 15.9781 11.9783 16.0884 11.7288 16.1834L11.07 16.43L10.485 18.05C10.4416 18.1686 10.3634 18.2714 10.2606 18.3448C10.1578 18.4182 10.0352 18.4588 9.90897 18.4613L8.19896 18.5C8.06933 18.5034 7.94183 18.4665 7.834 18.3945C7.72618 18.3225 7.64333 18.2188 7.59686 18.0977L6.90746 16.2734C6.67225 16.193 6.43935 16.106 6.20906 16.0124C6.02071 15.9309 5.8352 15.8429 5.65286 15.7487L3.94286 16.4795C3.83019 16.5276 3.70597 16.5418 3.58533 16.5206C3.46469 16.4993 3.35283 16.4435 3.26336 16.3598L1.99796 15.1727C1.90375 15.0847 1.83959 14.9693 1.81456 14.8428C1.78953 14.7164 1.80488 14.5853 1.85846 14.468L2.59376 12.866C2.49597 12.6763 2.40531 12.4829 2.32196 12.2864C2.22468 12.0459 2.13463 11.8025 2.05196 11.5565L0.440965 11.066C0.310015 11.0264 0.195799 10.9447 0.116055 10.8336C0.0363112 10.7224 -0.00449838 10.588 -3.54887e-05 10.4513L0.0629645 8.7224C0.0674488 8.6096 0.102688 8.50016 0.16487 8.40594C0.227052 8.31172 0.313811 8.23628 0.415765 8.1878L2.10596 7.376C2.18426 7.0889 2.25266 6.8657 2.31296 6.7028C2.39787 6.48522 2.49216 6.27142 2.59556 6.062L1.86296 4.514C1.80737 4.39645 1.79048 4.26429 1.81474 4.13653C1.839 4.00877 1.90315 3.892 1.99796 3.803L3.26156 2.6096C3.35014 2.52606 3.46098 2.46989 3.58073 2.44785C3.70048 2.42582 3.82405 2.43886 3.93656 2.4854L5.64476 3.191C5.83376 3.065 6.00476 2.9633 6.15956 2.8814C6.34406 2.7833 6.59067 2.6807 6.90117 2.57L7.49516 0.913102C7.53908 0.791843 7.61935 0.687095 7.72502 0.61316C7.83069 0.539224 7.9566 0.499706 8.08556 0.500002H9.97016ZM9.02156 6.8171C7.52126 6.8171 6.30537 8.0186 6.30537 9.5018C6.30537 10.985 7.52126 12.1874 9.02156 12.1874C10.521 12.1874 11.7369 10.985 11.7369 9.5018C11.7369 8.0186 10.5219 6.8171 9.02156 6.8171Z"/>
+                  </svg>
+                   Settings</a>
+              </div>
+              <div class="flex flex-col gap-2 justify-center sm:items-center m-4 sm:m-0">
+                <div class="flex items-center justify-center border border-gray-400 w-16 h-16 rounded-xl">
+                  <div class="w-14 h-14 bg-red-300 rounded-lg overflow-hidden relative">
+                    <img id="dashboardAvatar" src="../img/tumblr_nl6mqsjd5w1s4fz4bo1_500.gif" class="w-full h-full object-cover absolute"/>
+                    <div id="backupAvatar" class="flex justify-center items-center w-full h-full text-white font-bold">m</div>
+                  </div>
+                </div>
+                <div id="dashboardName" class="name">Name</div>
+              </div>
+            </nav>
+          </div>
+          <div id="hamburger" class="w-fit h-8 sm:hidden relative flex flex-col justify-center items-end gap-1 transition-all duration-200">
+            <div id="hamburgerLine" class="hamburger-line"></div>
+          </div>
+    </header>
+    <main class="flex flex-col gap-6 font-inter mb-24 w-full pl-3 py-4 p-0 sm:p-6">
+      
+        <div>
+          <h1 class="text-3xl font-bold">Add New Listing</h1>
+        </div>
+      <form id="makeListingForm" action="" class="flex gap-10">
+        <div class="w-1/2 flex flex-col gap-10">
+          <div class="flex flex-col gap-2">
+            <label for="">Listing Title</label>
+            <input class="form-input" for="" placeholder="Title"></input>
+            <span></span>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="">Listing Description</label>
+            <textarea class="form-input h-40" for="" placeholder="Description"></textarea>
+            <span></span>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="">Auction Ends</label>
+            <input id="endsAtInput" type="datetime-local" class="form-input" for="" min='2022-12-13' placeholder="Title"></input>
+            <span></span>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="">Listing Title</label>
+            <div id="tagPreview">
+              <div class="border w-fit p-1 px-2 bg-gray-300 rounded-md flex gap-1 items-center">hello <img src="../img/icons/close.svg" class="w-2 h-2" alt=""></div>
+            </div>
+            <div class="flex gap-2 w-full">
+              <input class="form-input w-full" for="" placeholder="Add tags Here"></input>
+              <button class="btn min-w-[150px]">add tag</button>
+            </div>
+            <span></span>
+          </div>
+        </div>
+       <div class="w-1/2 bg-blue-50">
+        img
+       </div>
+      </form>
+      
+    </main>
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/makeListing.js"></script>
+  </body>
+</html>

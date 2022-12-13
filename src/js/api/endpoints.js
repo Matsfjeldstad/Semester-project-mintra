@@ -7,7 +7,11 @@ const signupURL = `${BASE_API_URL}auth/register`;
 
 // profiles endpoints
 export function allProfileURL(flag, flagParam = true) {
-  const profileURL = `${BASE_API_URL}profiles${flag ? `?${flag}=${flagParam}` : ''}`;
+  const profileURL = `${BASE_API_URL}profiles?_listings=true${flag ? `&${flag}=${flagParam}` : ''}`;
+  return profileURL;
+}
+function singleProfileURL(name) {
+  const profileURL = `${BASE_API_URL}profiles/${name}?_bids=true&_listings=true`;
   return profileURL;
 }
 
@@ -31,4 +35,5 @@ function checkCreditURL(userName) {
 
 export {
   loginURL, signupURL, allListingURL, singleListingURL, makeBidURL, checkCreditURL,
+  singleProfileURL,
 };

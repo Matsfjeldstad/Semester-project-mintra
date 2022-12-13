@@ -3,7 +3,22 @@ import checkIMG from './checkImg';
 const navBars = document.querySelectorAll('nav');
 const userObject = JSON.parse(localStorage.getItem('user'));
 
-export default function mynav() {
+const hamburgerMenu = document.querySelector('#hamburger');
+function menuOpen(navElement, links) {
+  const hamburgerLine = hamburgerMenu.querySelector('#hamburgerLine');
+  hamburgerLine.classList.toggle('hamburger-line-active');
+  const navOverlay = document.querySelector(`#${navElement}`);
+  // const navOverlay = document.querySelector(`#mobileNav`);
+  navOverlay.classList.toggle('mobile-nav-active');
+  navOverlay.classList.toggle('h-0');
+
+  const navTest = document.querySelectorAll(`.${links}`);
+  navTest.forEach((test) => {
+    test.classList.toggle('animate-in');
+  });
+}
+
+function mynav() {
   navBars.forEach((navBar) => {
     const logedInLink = navBar.querySelectorAll('.loggedInLink');
     const logedOutLink = navBar.querySelectorAll('.loggedOutLink');
@@ -29,3 +44,5 @@ export default function mynav() {
     }
   });
 }
+
+export { mynav, menuOpen };

@@ -2,21 +2,6 @@ import countdown from './components/countdown';
 import { getListings } from './components/fetch-listings';
 import newCard, { lazyLoadCard } from './components/productCard';
 
-const hamburgerMenu = document.querySelector('#hamburger');
-
-hamburgerMenu.onclick = function menuOpen() {
-  const hamburgerLine = hamburgerMenu.querySelector('#hamburgerLine');
-  hamburgerLine.classList.toggle('hamburger-line-active');
-  const navOverlay = document.querySelector('#mobileNav');
-  navOverlay.classList.toggle('mobile-nav-active');
-  navOverlay.classList.toggle('h-0');
-
-  const navTest = document.querySelectorAll('.test');
-  navTest.forEach((test) => {
-    test.classList.toggle('animate-in');
-  });
-};
-
 if (localStorage.user) {
   const btns = document.querySelectorAll('.btn');
   const h1 = document.querySelector('h1');
@@ -45,7 +30,8 @@ const allListings = async () => {
     if (listing.bids.length === 0) {
       bid = 'no bids';
     } else {
-      bid = `${listing.bids[listing.bids.length - 1].amount}c`;
+      const sortedBids = listing.bids.sort((a, b) => b.amount - a.amount);
+      bid = `${sortedBids[0].amount}c`;
     }
     const cards = newCard(listing.media, listing.title, bid, listing.id);
     listingGrid.innerHTML += cards.outerHTML;

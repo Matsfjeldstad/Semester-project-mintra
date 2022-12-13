@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.hamburger-line{
-@apply transition w-7 h-1 relative bg-black after:w-8 after:h-1 after:bg-black after:absolute after:transition after:top-2 after:right-0 before:w-6 before:h-1 before:bg-black before:absolute before:-top-2 before:right-0;
-}
+
 
 @layer components {
   .product-img{
@@ -23,7 +21,7 @@
   }
 
   .btn{
-    @apply flex justify-center items-center duration-100 py-4 px-6 bg-[#141414] text-white rounded-md hover:bg-[#4B4B4B] disabled:bg-gray-400
+    @apply flex justify-center items-center duration-100 py-3 px-6 bg-[#141414] text-white rounded-md hover:bg-[#4B4B4B] disabled:bg-gray-400
   }
 
   .card{
@@ -40,7 +38,7 @@
   }
 
   .form-input{
-    @apply border border-gray-300 p-4 rounded-lg 
+    @apply border border-gray-300 p-3 rounded-lg 
   }
 
   .inputError{
@@ -51,8 +49,16 @@
     @apply relative font-bold after:h-0.5 after:w-0 after:absolute after:bg-black after:left-0 after:bottom-0 hover:after:w-full after:duration-300
 
   }
+  .hamburger-line{
+    @apply transition w-7 h-1 relative bg-black after:w-8 after:h-1 after:bg-black after:absolute after:transition after:top-2 after:right-0 before:w-6 before:h-1 before:bg-black before:absolute before:-top-2 before:right-0;
+    }
   .hamburger-line-active{
-    @apply transition duration-200 rotate-45 w-8 h-1 relative bg-black after:w-8 after:h-1 after:bg-black after:transition after:absolute after:top-0 after:-rotate-90 after:right-auto before:w-8 before:transition before:h-1 before:bg-black before:absolute before:rotate-90 before:top-0 before:right-auto;
+    @apply transition duration-200 rotate-45 w-8 h-1 relative bg-black after:w-8 after:h-1 after:bg-black after:transition after:absolute after:top-0 after:-rotate-90 after:right-auto before:w-8 before:transition before:h-1 before:bg-black before:absolute before:rotate-90 before:top-0 before:right-auto
+    
+   }
+
+   .dashboard-nav{
+    @apply duration-100 flex items-center gap-4 p-2 rounded-md hover:bg-gray-200
    }
 }
 

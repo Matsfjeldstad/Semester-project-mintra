@@ -34,7 +34,8 @@ setInterval(() => {
   timeLeft.innerHTML = countdown(listing.endsAt);
 }, 1000);
 
-const lastBid = listing.bids[listing.bids.length - 1];
+const sortedBids = listing.bids.sort((a, b) => b.amount - a.amount);
+const lastBid = sortedBids[0];
 
 currentBid.innerHTML = listing.bids.length > 0 ? `${lastBid.amount}c` : 'no bids';
 
@@ -42,7 +43,7 @@ description.innerHTML = listing.description;
 
 if (listing.bids.length > 0) {
   noBidsContainer.remove();
-  listing.bids.forEach((bid) => {
+  sortedBids.forEach((bid) => {
     const tableRow = document.createElement('tr');
     tableRow.className = 'bg-white border-b';
     const bidName = document.createElement('td');
@@ -61,10 +62,10 @@ if (listing.bids.length > 0) {
     bidAmount.innerText = bid.amount;
 
     tableRow.append(bidName, bidTime, bidAmount);
-    tableBody.prepend(tableRow);
+    tableBody.append(tableRow);
 
-    bidInput.value = listing.bids[listing.bids.length - 1].amount + 1;
-    bidInput.min = listing.bids[listing.bids.length - 1].amount + 1;
+    bidInput.value = sortedBids[0].amount + 1;
+    bidInput.min = sortedBids[0].amount + 1;
   });
 }
 
