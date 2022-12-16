@@ -34,6 +34,3 @@ This will start a development server and open the website in your default browse
 
 We welcome contributions to the project! If you have an idea for a new feature or have found a bug, please open an issue or submit a pull request.
 
-## 📜 License
-
-This project is licensed under the [MIT](https://opensource.org/licenses/MIT) license. See the [LICENSE](LICENSE) file for more details.
