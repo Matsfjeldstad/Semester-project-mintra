@@ -3,7 +3,7 @@ import { menuOpen, mynav } from './components/navbar';
 
 const hamburgerMenu = document.querySelector('#hamburger');
 
-if (window.location.href.includes('/dashboard/')) {
+if (window.location.href.includes('/dashboard/') && !window.location.href.includes('/dashboard/add-profile-pic') && !window.location.href.includes('/dashboard/update-avatar')) {
   if (!localStorage.getItem('user')) {
     window.location.href = '/';
   }
