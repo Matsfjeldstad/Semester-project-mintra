@@ -1,19 +1,17 @@
 import { checkCreditURL } from '../api/endpoints';
-import { userToken } from './localStorageUser';
 
-async function getUserCredits() {
+async function getUserCredits(name, token) {
   try {
-    const response = await fetch(checkCreditURL, {
+    const response = await fetch(checkCreditURL(name), {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
-        Authorization: `Bearer ${userToken}`,
+        Authorization: `Bearer ${token}`,
       },
     });
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log(error);
     return error;
   }
 }

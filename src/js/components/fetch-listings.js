@@ -1,14 +1,10 @@
 import { allListingURL, singleListingURL } from '../api/endpoints';
 
-async function getListings(flag, flagParam) {
+async function getListings(sortOrder, flag, flagParam, offset, tag, active) {
   try {
-    const response = await fetch(allListingURL(flag, flagParam));
+    const response = await fetch(allListingURL(sortOrder, flag, flagParam, offset, tag, active));
     const data = await response.json();
-    if (!response.ok) {
-      const { errors } = data;
-      return errors;
-    }
-    return data;
+    return { response, data };
   } catch (err) {
     return err;
   }
@@ -22,7 +18,7 @@ async function getSingleListing(id, flag, flagParam) {
       const { errors } = data;
       return errors;
     }
-    return data;
+    return await { response, data };
   } catch (err) {
     return err;
   }

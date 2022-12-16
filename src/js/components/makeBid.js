@@ -12,10 +12,8 @@ async function makeBid(bid, listingId) {
       body: JSON.stringify({ amount: Number(bid) }),
     });
     const data = await response.json();
-    console.log(data);
     return await data;
   } catch (error) {
-    console.log(error);
     return error;
   }
 }

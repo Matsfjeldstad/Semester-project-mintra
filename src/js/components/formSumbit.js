@@ -9,7 +9,6 @@ export default function formSubmit(loginEmailInput, loginPasswordInput, redirect
   const emailCheck = emailValidation(loginEmailInput);
   const passwordCheck = passwordValidation(loginPasswordInput);
   if (emailCheck && passwordCheck) {
-    console.log(true);
     const formBody = {
       email: loginEmailInput.value.trim(),
       password: loginPasswordInput.value.trim(),

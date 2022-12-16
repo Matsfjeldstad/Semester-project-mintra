@@ -22,7 +22,7 @@ async function signUpUser(signUpUserData, errorField) {
         email: signUpUserData.email,
         password: signUpUserData.password,
       };
-      loginUser(loginBody, '', '/add-profile-pic.html');
+      loginUser(loginBody, '', 'dashboard/add-profile-pic.html');
     }
   } catch (e) {
     // eslint-disable-next-line no-console

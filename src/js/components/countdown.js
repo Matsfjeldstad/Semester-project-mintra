@@ -12,7 +12,7 @@ const countdown = (time) => {
   const textSecond = Math.floor((gap % minute) / second);
   const countdownString = `${textDay}d ${textHour}h ${textMinute}m ${textSecond}s`;
   if (gap < 0) {
-    return 'auction ended';
+    return 'Auction Ended';
   }
   return countdownString;
 };

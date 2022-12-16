@@ -23,7 +23,6 @@ async function loginUser(loginUserData, errorField, redirectLink = '/') {
       window.location.href = redirectLink;
     }
   } catch (e) {
-    console.log(e);
     const errorContainer = errorField;
     errorContainer.classList.remove('opacity-0');
     errorContainer.classList.add('opacity-1');
