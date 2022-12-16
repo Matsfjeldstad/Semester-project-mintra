@@ -13,11 +13,9 @@ async function getProfile() {
     const data = await response.json();
     if (!response.ok) {
       const { errors } = data;
-      console.log(data);
       return errors;
     }
-    console.log(response);
-    return response;
+    return { response, data };
   } catch (err) {
     return err;
   }

@@ -20,8 +20,17 @@
     @apply h-fit mt-10
   }
 
+  .btn-skeleton{
+    @apply flex justify-center items-center duration-100 py-3 px-6 rounded-md cursor-pointer
+  }
   .btn{
-    @apply flex justify-center items-center duration-100 py-3 px-6 bg-[#141414] text-white rounded-md hover:bg-[#4B4B4B] disabled:bg-gray-400
+    @apply btn-skeleton bg-[#141414] text-white  hover:bg-[#4B4B4B] disabled:bg-gray-400
+  }
+  .btn-ghost{
+    @apply btn-skeleton bg-none border-2 border-white text-white hover:bg-white/20
+  }
+  .btn-danger{
+    @apply btn-skeleton bg-none border-2 border-red-400 bg-red-400 text-white hover:bg-red-500 hover:border-red-500
   }
 
   .card{

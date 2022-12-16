@@ -6,6 +6,8 @@ node_modules
 
 *.cjs
 
+dist
+
 package.json
 
 package-lock.json

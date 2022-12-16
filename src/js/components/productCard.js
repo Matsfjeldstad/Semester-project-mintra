@@ -43,7 +43,10 @@ export function lazyLoadCard() {
 }
 
 export default function newCard(imgLink, listingName, listingBid, listingId) {
-  cardImg.src = imgLink.length > 0 ? imgLink[0] : '/img/mintra.jpg';
+  cardImg.src = imgLink.length > 0 ? imgLink[0] : '/mintra.jpg';
+  cardImg.onerror = () => {
+    this.src = '/mintra.jpg';
+  };
   listingTitle.innerHTML = listingName;
   // eslint-disable-next-line quotes
   card.href = `./spesific-listing.html?id=${listingId}`;

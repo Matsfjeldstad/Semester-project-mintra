@@ -17,7 +17,7 @@ const modalFormContainer = document.createElement('div');
 modalFormContainer.className = 'p-6 h-full w-full flex justify-center';
 modalFormContainer.innerHTML = `
 <div class="h-full w-full flex flex-col justify-center items-center gap-4">
-  <div class="flex flex-col items-center text-3xl">Welcome to <span class="font-poppins text-18 font-extrabold text-[#E1CC0B] text-6xl">MINTRA</span></div>
+  <div class="flex flex-col items-center text-3xl">Welcome to <span class="font-inter text-18 font-extrabold text-[#E1CC0B] text-6xl">MINTRA</span></div>
   <form id="loginForm" action="" class="flex flex-col gap-4 w-full max-w-md">
     <div class="flex flex-col">
       <label for="loginEmail" class="font-bold">Your Email</label>
@@ -47,7 +47,6 @@ closeModal.onclick = function close() {
 function loginModal(link = '') {
   const body = document.querySelector('body');
   body.prepend(modal);
-  console.log(loginEmail);
   modalForm.onsubmit = function modalSumbit(event) {
     event.preventDefault();
     formSubmit(loginEmail, loginPassword, link);

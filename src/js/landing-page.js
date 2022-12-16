@@ -3,7 +3,7 @@ import { getListings } from './components/fetch-listings';
 import newCard, { lazyLoadCard } from './components/productCard';
 
 if (localStorage.user) {
-  const btns = document.querySelectorAll('.btn');
+  const btns = document.querySelectorAll('.dynamicBtn');
   const h1 = document.querySelector('h1');
   const h2 = document.querySelector('h2');
   h1.innerHTML = 'Find your next treasure at Mintra';
@@ -11,7 +11,7 @@ if (localStorage.user) {
   btns.forEach((btn) => {
     const button = btn;
     button.innerHTML = 'Make a listing';
-    button.parentElement.href = '/make-listing/';
+    button.parentElement.href = '/dashboard/make-listing.html';
   });
 }
 
@@ -23,7 +23,8 @@ for (let i = 0; i < 24; i += 1) {
 }
 
 const allListings = async () => {
-  const listings = await getListings('limit', 24);
+  const getAllListings = await getListings('desc', 'limit', 24);
+  const listings = getAllListings.data;
   listingGrid.innerText = '';
   await listings.forEach((listing) => {
     let bid;
@@ -74,4 +75,4 @@ const allListings = async () => {
     // }, 1000);
   });
 };
-await allListings();
+allListings();

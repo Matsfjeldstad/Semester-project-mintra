@@ -1,82 +1,113 @@
-import checkIMG from './components/checkImg';
+import { DateTime } from 'luxon';
 import { getSingleListing } from './components/fetch-listings';
-import { singleProfileURL } from './api/endpoints';
-// import getProfile from './utils/fetchProfile';
-
-const userObject = JSON.parse(localStorage.getItem('user'));
-
-const profileAvatar = document.querySelector('#dashboardAvatar');
-const profileName = document.querySelector('#dashboardName');
-const backupAvatar = document.querySelector('#backupAvatar');
-const totalBalance = document.querySelector('#totalBalance');
-const totalWins = document.querySelector('#totalWins');
-const totalActiveListing = document.querySelector('#totalActiveListing');
-const averageSpending = document.querySelector('#averageSpending');
-
-function dashboardNav() {
-  profileAvatar.src = userObject.avatar;
-  checkIMG(profileAvatar);
-  profileName.innerHTML = userObject.name;
-  // eslint-disable-next-line prefer-destructuring
-  backupAvatar.innerHTML = userObject.name[0];
-}
+import { getProfileActiveListings } from './utils/profileListings';
+import getProfile from './utils/fetchProfile';
+import dashboardNav from './components/dashboardNav';
 
 dashboardNav();
-async function getProfile() {
-  try {
-    const response = await fetch(singleProfileURL(userObject.name), {
-      method: 'GET',
-      headers: {
-        'Content-type': 'application/json',
-        Authorization: `Bearer ${userObject.accessToken}`,
-      },
-    });
-    const data = await response.json();
-    if (!response.ok) {
-      console.log(data);
-    }
-    console.log(data);
+
+const totalBalance = document.querySelector('#totalBalance');
+const totalWins = document.querySelectorAll('.totalWins');
+const totalActiveListingsDisplays = document.querySelectorAll('.totalActiveListing');
+const averageSpending = document.querySelector('#averageSpending');
+
+const winsTable = document.querySelector('#winsTable');
+const winsTableBody = winsTable.querySelector('#winsTableBody');
+
+(async () => {
+  const profileData = await getProfile();
+  const { data } = profileData;
+
+  if (profileData.response.ok) {
     totalBalance.innerHTML = data.credits;
     const allWins = data.wins;
-    totalWins.innerHTML = allWins.length;
+    totalWins.forEach((totalWin) => {
+      const winElements = totalWin;
+      winElements.innerHTML = allWins.length;
+    });
     const totalWinArray = [];
+    const winsArray = [];
     allWins.forEach(async (win) => {
-      const singleListing = await getSingleListing(win);
-      const highestbid = await singleListing.bids.reduce(
-        (prev, current) => ((prev.amount > current.amount) ? prev.amount : current.amount),
-      );
+      const singleListingResponse = await getSingleListing(win);
+      const singleListing = singleListingResponse.data;
+      winsArray.push(singleListing);
+      let highestbid;
+      if (singleListing.bids.length > 1) {
+        highestbid = await singleListing.bids.reduce(
+          (prev, current) => ((prev.amount > current.amount) ? prev.amount : current.amount),
+        );
+      } else {
+        highestbid = singleListing.bids[0].amount;
+      }
       totalWinArray.push(highestbid);
-      const costOfWins = totalWinArray.reduce((p, c, i) => p + (c - p) / (i + 1), 0);
-      averageSpending.innerHTML = costOfWins;
+      const costOfWins = totalWinArray.reduce((a, b, i) => a + (b - a) / (i + 1), 0);
+      averageSpending.innerHTML = costOfWins.toFixed(2);
+      const tableRow = document.createElement('tr');
+      singleListing.endsAt = DateTime.fromISO(singleListing.endsAt).toFormat('dd.MM.yy HH:mm');
+      tableRow.innerHTML = `
+    <th scope="row" class="py-4 font-medium text-gray-100 whitespace-nowrap">
+    <a href="/spesific-listing.html?id=${singleListing.id}" class="font-medium hover:underline">${singleListing.title}</a>
+    </th>
+    <td class="py-4 px-6 text-right">
+    ${highestbid}
+    </td>
+    <td id="endsAt" class="py-4 px-6 text-right">
+    ${singleListing.endsAt}
+    </td>
+    `;
+      tableRow.className = 'border-b border-gray-700 text-gray-100';
+      if (winsArray.length < 4) {
+        winsTableBody.append(tableRow);
+      }
     });
-    // const costOfWins = totalWinArray.reduce((partialSum, a) => partialSum + a, 0);
-  } catch (err) {
-    console.log(err);
   }
-}
+  const activeListings = await getProfileActiveListings();
+  const activeListingsTable = document.querySelector('#activeListingsTable');
+  const activeListingsTableBody = activeListingsTable.querySelector('#activeListingsTableBody');
 
-getProfile();
-
-async function getProfileActiveListings() {
-  try {
-    const response = await fetch(`https://nf-api.onrender.com/api/v1/auction/profiles/${userObject.name}/listings?_active=true`, {
-      method: 'GET',
-      headers: {
-        'Content-type': 'application/json',
-        Authorization: `Bearer ${userObject.accessToken}`,
-      },
+  if (activeListings.response.ok) {
+    const allListings = activeListings.data;
+    totalActiveListingsDisplays.forEach((display) => {
+      const displayElement = display;
+      displayElement.innerHTML = allListings.length;
     });
-    const data = await response.json();
-    if (!response.ok) {
-      const { errors } = data;
-      console.log(errors);
+    activeListingsTableBody.innerHTML = '';
+    if (allListings.length > 0) {
+      for (let i = 0; i < allListings.length; i += 1) {
+        if (i === 3) {
+          break;
+        }
+        const listing = allListings[i];
+        const tableRow = document.createElement('tr');
+        const { bids } = listing;
+        const bidsSorted = bids.sort((a, b) => b.amount - a.amount);
+        const highestBid = bidsSorted[0] ? `${bidsSorted[0].amount}c` : '-';
+        listing.endsAt = DateTime.fromISO(listing.endsAt).toFormat('dd.MM.yy HH:mm');
+        tableRow.innerHTML = `
+      <th scope="row" class="py-4 font-medium text-gray-100 whitespace-nowrap">
+      <a href="/spesific-listing.html?id=${listing.id}" class="font-medium hover:underline">${listing.title}</a>
+      </th>
+      <td class="py-4 px-6 text-right">
+          ${highestBid}
+      </td>
+      <td id="endsAt" class="py-4 px-6 text-right">
+          ${listing.endsAt}
+      </td>
+    `;
+        tableRow.className = 'border-b border-gray-700 text-gray-100';
+        activeListingsTableBody.append(tableRow);
+      }
+    } else {
+      activeListingsTable.innerHTML = `
+  <div class="h-full w-full flex flex-col gap-5 justify-center items-center">
+    <div>
+    You currently dont have any active listings
+    </div>
+    <a href="./make-listing.html">
+    <button class='btn-ghost'>Make a listing</button>
+    </a>
+  </div>`;
+      activeListingsTable.classList.add('h-full');
     }
-    console.log(data);
-    totalActiveListing.innerHTML = data.length;
-  } catch (err) {
-    console.log(err);
   }
-}
-getProfileActiveListings();
-
-export default dashboardNav;
+})();

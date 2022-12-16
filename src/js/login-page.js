@@ -6,7 +6,7 @@ function goBack() {
   window.history.back();
 }
 
-backButton.onclick = function () {
+backButton.onclick = () => {
   goBack();
 };
 

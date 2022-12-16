@@ -16,8 +16,9 @@ function singleProfileURL(name) {
 }
 
 // listing endpoints¨
-function allListingURL(flag, flagParam = true) {
-  const listingURL = `${BASE_API_URL}listings?_bids=true&sort=created&sortOrder=desc${flag ? `&${flag}=${flagParam}` : ''}`;
+// eslint-disable-next-line default-param-last
+function allListingURL(sortOrder, flag, flagParam = true, offset = 0, tag, active) {
+  const listingURL = `${BASE_API_URL}listings?_bids=true&sort=created&sortOrder=${sortOrder}${flag ? `&${flag}=${flagParam}` : ''}&offset=${offset}${tag ? `&_tag=${tag}` : ''}${active ? `&_active=${active}` : ''}`;
   return listingURL;
 }
 function singleListingURL(id) {

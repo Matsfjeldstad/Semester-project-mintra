@@ -9,62 +9,66 @@
     <title>Mintra App</title>
   </head>
   <body class="bg-[#FBFAFA] font-inter">
-    <header>
-        <div id="headerNav" class=" h-20 bg-[#FBFAFA] relative z-10">
-          <div class="inner h-full px-6 flex items-center justify-between">
-            <a href="#" id="header-logo" class="font-poppins text-[20px] sm:text-[32px] font-extrabold">MINTRA</a>
-            <div id="hamburger" class="w-fit h-8 sm:hidden relative flex flex-col justify-center items-end gap-1 transition-all duration-200">
-              <div id="hamburgerLine" class="hamburger-line"></div>
+    <header class="sticky top-0 z-[20]">
+      <div id="headerNav" class=" h-20 bg-[#FBFAFA] relative z-10">
+        <div class="inner h-full px-6 flex items-center justify-between">
+          <a href="/" id="header-logo" class="font-inter text-[20px] sm:text-[32px] font-extrabold">MINTRA</a>
+          <div id="hamburger" class="w-fit h-8 sm:hidden relative flex flex-col justify-center items-end gap-1 transition-all duration-200">
+            <div id="hamburgerLine" class="hamburger-line"></div>
+          </div>
+          <nav id="desktopNav" class="w-fit h-full flex-row gap-10 hidden items-center sm:flex">
+            <a href="/all-listings.html" class="nav-link">Explore</a>
+            <a href="/login.html" class="loggedOutLink nav-link">Log in</a>
+            <a href="/dashboard/" id="deskt" class="loggedInLink nav-link">Dashboard</a>
+            <a href="/signup.html" class="loggedOutLink nav-link">Sign up</a>
+            <div id="userButton" class="btn relative z-[30] loggedInLink text-white bg-[#222] border border-[#444] w-fit h-fit py-1.5 pl-1.5 pr-4 rounded-full flex items-center gap-3">
+              <div class="w-8 h-8 overflow-hidden relative rounded-full">
+                <img alt="" class="w-full h-full rounded-full object-cover absolute">
+                <div id="backupAvatar" class="bg-red-400 w-full h-full flex justify-center items-center font-bold text-white capitalize"> M </div>
+              </div>
+              <div>
+              hello, <span class ='buttonName'></span>
+              </div>
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="chevron duration-150">
+                <path d="M1 1L5 5L9 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div class="dropDown duration-300 w-full hover:h-40 bg-[#222] absolute top-[50px] left-0 rounded-lg z-[-1] h-0 flex flex-col items-center gap-3 overflow-hidden">
+                <a href="/dashboard/" class="mt-4 flex items-center gap-2 border-b border-transparent hover:border-white w-fit">
+                  <svg width="200" height="176" viewBox="0 0 200 176" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-fit fill-white">
+                    <path d="M184 32H24C21.8783 32 19.8434 31.1571 18.3431 29.6569C16.8429 28.1566 16 26.1217 16 24C16 21.8783 16.8429 19.8434 18.3431 18.3431C19.8434 16.8429 21.8783 16 24 16H160C162.122 16 164.157 15.1571 165.657 13.6569C167.157 12.1566 168 10.1217 168 8C168 5.87827 167.157 3.84344 165.657 2.34315C164.157 0.842856 162.122 0 160 0H24C17.6429 0.0263237 11.5537 2.56334 7.05852 7.05852C2.56334 11.5537 0.0263237 17.6429 0 24V152C0.0263237 158.357 2.56334 164.446 7.05852 168.941C11.5537 173.437 17.6429 175.974 24 176H184C188.243 176 192.313 174.314 195.314 171.314C198.314 168.313 200 164.243 200 160V48C200 43.7565 198.314 39.6869 195.314 36.6863C192.313 33.6857 188.243 32 184 32ZM148 116C145.627 116 143.307 115.296 141.333 113.978C139.36 112.659 137.822 110.785 136.913 108.592C136.005 106.399 135.768 103.987 136.231 101.659C136.694 99.3311 137.836 97.193 139.515 95.5147C141.193 93.8365 143.331 92.6936 145.659 92.2306C147.987 91.7676 150.399 92.0052 152.592 92.9135C154.785 93.8217 156.659 95.3598 157.978 97.3332C159.296 99.3066 160 101.627 160 104C160 107.183 158.736 110.235 156.485 112.485C154.235 114.736 151.183 116 148 116Z"/>
+                  </svg>
+                   credits <span class="navUserCredits"></span></a>
+                <a href="/dashboard/your-listings.html" class="hover:border-b w-fit border-b border-transparent hover:border-white">Your listings</a>
+                <button id="logOutBtn" href="" class="logOutBtn btn-ghost p-2 px-4 w-fit">Logout</button>
+              </div>                  
             </div>
-            <nav id="desktopNav" class="w-fit h-full flex-row gap-10 hidden items-center sm:flex">
-              <a href="/all-listings.html" class="nav-link">Explore</a>
-              <a href="./login.html" class="loggedOutLink nav-link">Log in</a>
-              <a href="#" id="deskt" class="loggedInLink nav-link">Dashboard</a>
-              <a href="/signup.html" class="loggedOutLink nav-link">Sign up</a>
-              <div id="userButton" class="loggedInLink text-white bg-[#222] border border-[#444] w-fit h-fit py-1.5 pl-1.5 pr-4 rounded-full flex items-center gap-3">
-                <div class="w-8 h-8 overflow-hidden relative rounded-full">
-                  <img src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg" alt="" class="w-full h-full rounded-full object-cover absolute">
+          </nav>
+          <nav id="mobileNav" class="duration-300 absolute  h-0 bg-[#FBFAFA] left-0 top-20 overflow-hidden sm:hidden">
+            <div class="w-full h-full p-6 flex flex-col gap-10">
+              <div id="userButton" class="relative z-[30] loggedInLink flex gap-3 font-bold items-center justify-start w-full">
+                <div class="text-2xl">
+                  Hello, <span class ='buttonName'></span>
+                </div>
+                <div class="w-14 h-14 overflow-hidden relative rounded-full">
+                  <img   alt="" class="w-full h-full rounded-full object-cover absolute">
                   <div id="backupAvatar" class="bg-red-400 w-full h-full flex justify-center items-center font-bold text-white capitalize"> M </div>
                 </div>
-                <div>
-                hello, <span class ='buttonName'></span>
-                </div>
-                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 1L5 5L9 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>                  
               </div>
-            </nav>
-            <nav id="mobileNav" class="duration-300 absolute  h-0 bg-[#FBFAFA] left-0 top-20 overflow-hidden sm:hidden">
-              <div class="w-full h-full p-6 flex flex-col gap-10">
-                <div class="w-full relative">
-                  <label id="searchIcon" for="searchInput" class="absolute left-2 top-3">
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.0002 14L11.0095 11.004M12.6668 7.00001C12.6668 8.5029 12.0698 9.94424 11.0071 11.0069C9.9444 12.0697 8.50306 12.6667 7.00016 12.6667C5.49727 12.6667 4.05593 12.0697 2.99322 11.0069C1.93052 9.94424 1.3335 8.5029 1.3335 7.00001C1.3335 5.49712 1.93052 4.05578 2.99322 2.99307C4.05593 1.93037 5.49727 1.33334 7.00016 1.33334C8.50306 1.33334 9.9444 1.93037 11.0071 2.99307C12.0698 4.05578 12.6668 5.49712 12.6668 7.00001V7.00001Z" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                  </label>
-                  <input type="text" id="searchInput" class="py-2 w-full px-8 rounded-xl border border-gray-300" placeholder="Search"> 
-                </div>
-                <a href="#" class="test font-bold">Explore</a>
-                <a href="/login.html" class="loggedOutLink test font-bold">Log in</a>
-                <a href="#"  class="loggedInLink test font-bold">Dashboard</a>
-                <a href="/signup.html" class="loggedOutLink test font-bold">Sign up</a>
-               
-                <div id="userButton" class="loggedInLink test bg-[#FBFAFA] border border-gray-300 w-fit py-2 pl-2 pr-4 rounded-full flex items-center gap-3">
-                  <div class="w-8 h-8 overflow-hidden relative rounded-full">
-                    <img alt="" class="w-full h-full rounded-full object-cover absolute">
-                    <div id="backupAvatar" class="bg-red-400 w-full h-full flex justify-center items-center font-bold text-white capitalize"> M </div>
-                  </div>
-                  <div class="text-black">
-                  hello, <span class ='buttonName'></span>
-                  </div>
-                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L5 5L9 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>                  
-                </div>
-              </div>
-            </nav>
-          </div>
+              <a href="#" class=" font-bold">Explore</a>
+              <a href="/login.html" class="loggedOutLink test font-bold">Log in</a>
+              <a href="/dashboard/"  class="loggedInLink font-bold">Dashboard</a>
+              <a href="/signup.html" class="loggedOutLink font-bold">Sign up</a>
+              <a href="" class="loggedInLink flex items-center gap-2 font-bold border-b border-transparent hover:border-white w-fit">
+                <svg width="200" height="176" viewBox="0 0 200 176" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-fit fill-[#444]">
+                  <path d="M184 32H24C21.8783 32 19.8434 31.1571 18.3431 29.6569C16.8429 28.1566 16 26.1217 16 24C16 21.8783 16.8429 19.8434 18.3431 18.3431C19.8434 16.8429 21.8783 16 24 16H160C162.122 16 164.157 15.1571 165.657 13.6569C167.157 12.1566 168 10.1217 168 8C168 5.87827 167.157 3.84344 165.657 2.34315C164.157 0.842856 162.122 0 160 0H24C17.6429 0.0263237 11.5537 2.56334 7.05852 7.05852C2.56334 11.5537 0.0263237 17.6429 0 24V152C0.0263237 158.357 2.56334 164.446 7.05852 168.941C11.5537 173.437 17.6429 175.974 24 176H184C188.243 176 192.313 174.314 195.314 171.314C198.314 168.313 200 164.243 200 160V48C200 43.7565 198.314 39.6869 195.314 36.6863C192.313 33.6857 188.243 32 184 32ZM148 116C145.627 116 143.307 115.296 141.333 113.978C139.36 112.659 137.822 110.785 136.913 108.592C136.005 106.399 135.768 103.987 136.231 101.659C136.694 99.3311 137.836 97.193 139.515 95.5147C141.193 93.8365 143.331 92.6936 145.659 92.2306C147.987 91.7676 150.399 92.0052 152.592 92.9135C154.785 93.8217 156.659 95.3598 157.978 97.3332C159.296 99.3066 160 101.627 160 104C160 107.183 158.736 110.235 156.485 112.485C154.235 114.736 151.183 116 148 116Z"/>
+                </svg>
+                credits <span class="navUserCredits"></span></a>
+              <a href="" class="loggedInLink font-bold hover:border-b w-fit border-b border-transparent hover:border-white">Your listings</a>
+              <a href="" class=" logOutBtn loggedInLink btn-ghost font-bold border-[#444] text-[#444] p-2 px-4 w-fit">Logout</a>                
+            </div>
+          </nav>
         </div>
+      </div>
     </header>
     <main class="flex flex-col gap-24 font-inter mb-24">
         <section>
@@ -73,11 +77,11 @@
                     <h2 class=" font-bebas-neue text-7xl md:text-8xl text-[#E1CC0B] md:truncate w-full break-words ">Product Name</h2>     
                 </div>
                 <div class="product-img w-full md:max-w-xl h-[450px] md:h-full rounded-xl overflow-hidden snap-mandatory">
-                    <img id="listingImg" class="w-full h-full object-cover bg-gray-200 animate-pulse" alt="">
+                    <img id="listingImg" class="w-full h-full object-cover bg-gray-200 animate-pulse cursor-pointer" alt="">
                 </div>
                 <div class="flex flex-col h-full objec justify-center gap-10 w-full md:w-[40%] text-center md:text-left">
                     <div class="hidden md:flex flex-col">
-                        <div class="font-poppins text-lg font-extrabold">MINTRA</div>
+                        <div class="font-inter text-lg font-extrabold">MINTRA</div>
                         <h1 class=" font-bebas-neue text-6xl md:text-6xl text-[#E1CC0B] overflow-hidden w-full break-words truncate">Product Name</h1>     
                     </div>
                     <div class="flex flex-col items-center md:items-start gap-4">
@@ -104,6 +108,7 @@
                         <div class = "text-gray-400">Current Bid: <span id="currentBid" class="font-medium text-2xl text-[#444]"></span></div>
                         <div id="highestBidHandler" class="hidden border-green-400 border py-2 px-3 w-fit rounded-lg bg-green-200">🎉 You currently have the highest bid 🎉</div>
                     </div>
+                    <div class="bidErrorHandler duration-200 bg-gray-500 p-4 rounded-lg text-white hidden w-fit"></div>
                     <form id="makeBidForm" action="" class="flex gap-4 rounded-lg w-full flex-col justify-between">
                         <div class="flex w-full gap-3 flex-col md:flex-row">
                             <input id="bidInput" class="outline-none p-4 w-full border border-gray-300 rounded-lg" type="number" min="1" value="1" placeholder="Add bid">
@@ -162,7 +167,7 @@
     </main>
     <footer class="px-6 py-6 border-t border-gray-200 font-inter">
       <div class="inner flex justify-between items-center">
-        <a href="#" id="header-logo" class="font-poppins text-[20px] sm:text-[24px] font-extrabold">MINTRA</a>
+        <a href="#" id="header-logo" class="font-inter text-[20px] sm:text-[24px] font-extrabold">MINTRA</a>
         <p class="text-gray-500">Designed and developed by <a href="https://matsfjeldstad.no/" class="underline">Mats Fjeldstad</a></p>
       </div>
     </footer>

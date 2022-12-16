@@ -4,16 +4,28 @@ const imgURLInput = document.querySelector('#imgURLInput');
 const form = document.querySelector('#avatarForm');
 const uploadBTN = document.querySelector('#uploadBTN');
 const headingName = document.querySelector('#headingName');
-const paragraphName = document.querySelector('#paragraphName');
+const cancelLink = document.querySelector('#cancelLink');
+const user = JSON.parse(localStorage.getItem('user'));
 
-const userName = JSON.parse(localStorage.getItem('user')).name;
-const authToken = JSON.parse(localStorage.getItem('user')).accessToken;
+cancelLink.onclick = () => {
+  window.history.back();
+};
+const userName = user.name;
+const authToken = user.accessToken;
 
 // eslint-disable-next-line prefer-destructuring
 backupPic.innerHTML = userName[0];
 
 headingName.innerHTML = userName;
-paragraphName.innerHTML = userName;
+
+// avatarIMG.onerror = function (e) {
+//   e.target.className = 'avatarIMG w-full h-full object-cover hidden';
+//   uploadBTN.disabled = true;
+// };
+
+if (user.avatar) {
+  imgURLInput.src = user.avatar;
+}
 
 async function updateAvatar(name, url) {
   const putData = {
@@ -27,10 +39,9 @@ async function updateAvatar(name, url) {
   const response = await fetch(`https://nf-api.onrender.com/api/v1/auction/profiles/${name}/media`, putData);
   const data = await response.json();
   if (response.ok) {
-    const updatedUser = JSON.parse(localStorage.getItem('user'));
-    updatedUser.avatar = data.avatar;
-    localStorage.setItem('user', JSON.stringify(updatedUser));
-    window.location.href = '/';
+    user.avatar = data.avatar;
+    localStorage.setItem('user', JSON.stringify(user));
+    window.history.back();
   }
 }
 

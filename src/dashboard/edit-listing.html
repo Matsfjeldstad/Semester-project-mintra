@@ -44,11 +44,11 @@
         <div id="hamburgerLine" class="hamburger-line"></div>
       </div>
 </header>
-    <main class="flex flex-col gap-6 font-inter mb-24 w-full p-4 sm:p-6">
-      <form id="makeListingForm" action="" class="flex flex-col relative gap-3">
-          <h1 class="text-3xl font-bold z-10">Add New Listing</h1>
+    <main class="flex flex-col gap-6 font-inter mb-24 w-full p-4 sm:p-6 relative">
+      <form id="makeListingForm" action="" class="flex flex-col gap-3">
+          <h1 class="text-3xl font-bold">Edit Listing</h1>
           <div class="order-last w-full bg-white flex justify-start h-fit">
-            <button class="btn">Publish Listing</button>
+            <button class="btn">Update Listing</button>
           </div>
         </div>
         <div class="w-full flex flex-col gap-3">
@@ -67,23 +67,9 @@
                 <span class="text-sm text-gray-500">Add a text that describes </span>
               </div>
             </div>
-            <div class="w-full lg:w-1/2 flex flex-col gap-2 h-fit relative">
+            <div class="w-full lg:w-1/2 flex flex-col gap-2 h-fit ">
               Listing Image
               <div class="flex gap-3"> 
-                <div class="border border-gray-400 border-dashed w-full h-60 rounded-xl flex flex-col justify-center items-center cursor-pointer relative overflow-hidden">
-                  <img alt="" class="imgPreview w-full h-full object-cover  absolute"> 
-                  <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 12.5V15.5H12V17.5H15V20.5H17V17.5H20V15.5H17V12.5H15ZM10.3 18.5H2C0.9 18.5 0 17.6 0 16.5V2.5C0 1.4 0.9 0.5 2 0.5H16C17.1 0.5 18 1.4 18 2.5V10.8C17.4 10.6 16.7 10.5 16 10.5C14.9 10.5 13.8 10.8 12.9 11.4L11.5 9.5L8 14L5.5 11L2 15.5H10.1C10 15.8 10 16.2 10 16.5C10 17.2 10.1 17.9 10.3 18.5Z" fill="#595959"/>
-                  </svg>      
-                  <div class="underline text-sm text-[#595959]">Add Image</div>
-                </div> 
-                <div class="border border-gray-400 border-dashed w-full h-60 rounded-xl flex flex-col justify-center items-center cursor-pointer relative overflow-hidden">
-                  <img alt="" class="imgPreview w-full h-full object-cover absolute"> 
-                  <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 12.5V15.5H12V17.5H15V20.5H17V17.5H20V15.5H17V12.5H15ZM10.3 18.5H2C0.9 18.5 0 17.6 0 16.5V2.5C0 1.4 0.9 0.5 2 0.5H16C17.1 0.5 18 1.4 18 2.5V10.8C17.4 10.6 16.7 10.5 16 10.5C14.9 10.5 13.8 10.8 12.9 11.4L11.5 9.5L8 14L5.5 11L2 15.5H10.1C10 15.8 10 16.2 10 16.5C10 17.2 10.1 17.9 10.3 18.5Z" fill="#595959"/>
-                  </svg>      
-                  <div class="underline text-sm text-[#595959]">Add Image</div>
-                </div> 
                 <div class="border border-gray-400 border-dashed w-full h-60 rounded-xl flex flex-col justify-center items-center cursor-pointer relative overflow-hidden">
                   <img alt="" class="imgPreview w-full h-full object-cover  absolute"> 
                   <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,13 +88,7 @@
           </div>
           <div class="w-full lg:w-1/2 flex flex-col gap-3">
             <div class="flex flex-col gap-2">
-              <label for="">Auction Ends</label>
-              <input id="endsAtInput" type="datetime-local" class="form-input" for="" min='2022-12-13' placeholder="Title">
-              <div class="errorContainer"></div>
-              <span class="text-sm text-gray-500">Pick a date and hour for when the auction ends. </span>
-            </div>
-            <div class="flex flex-col gap-2">
-              <label for="">Listing Title</label>
+              <label for="">Listing Tags</label>
               <div class="flex gap-2 w-full">
                 <input id="tagsInput" class="form-input w-full" for="" placeholder="Add tags Here"></input>
               </div>
@@ -120,6 +100,6 @@
       </form> 
     </main>
     <script type="module" src="../js/main.js"></script>
-    <script type="module" src="../js/makeListing.js"></script>
+    <script type="module" src="../js/editListing.js"></script>
   </body>
 </html>

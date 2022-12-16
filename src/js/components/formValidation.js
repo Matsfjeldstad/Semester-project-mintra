@@ -67,36 +67,18 @@ function confirmPasswordValidation(passwordInput, confirmPasswordInput) {
   }
   return true;
 }
-
-// function postValidation(title, body, errorContainer) {
-//   const titleValue = '';
-//   let postBodyValue = '';
-//   const postData = {
-//     title: titleValue,
-//     body: postBodyValue,
-//   };
-//   if (!title.value.trim()) {
-//     errorContainer.classList.remove('hidden');
-//     errorContainer.innerHTML = 'Title is required';
-//   } else if (!body.value.trim()) {
-//     errorContainer.classList.remove('hidden');
-//     errorContainer.innerHTML = 'Post content is required';
-//   } else {
-//     errorContainer.classList.add('hidden');
-//     errorContainer.innerHTML = '';
-//     postBodyValue = body.value.trim();
-//   }
-//   if (!body.value.trim() && !title.value.trim()) {
-//     errorContainer.classList.remove('hidden');
-//     errorContainer.innerHTML = 'Title and Post content is required';
-//   }
-//   if (body.value.trim() && title.value.trim()) {
-//     postData.title = title.value.trim();
-//     postData.body = body.value.trim();
-//     return postData;
-//   }
-// }
+function titleValidation(titleInput) {
+  const titleInputValue = titleInput.value;
+  if (!titleInputValue.trim()) {
+    errorHandler(titleInput, 'This field is required');
+    return false;
+  }
+  if (titleInput.classList.contains('inputError')) {
+    removeHandler(titleInput);
+  }
+  return true;
+}
 
 export {
-  emailValidation, passwordValidation, confirmPasswordValidation, nameValidation,
+  emailValidation, passwordValidation, confirmPasswordValidation, nameValidation, titleValidation,
 };
